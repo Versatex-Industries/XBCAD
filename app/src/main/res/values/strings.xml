@@ -99,5 +99,11 @@
     <string name="weekly">Weekly</string>
     <string name="monthly">Monthly</string>
     <string name="add_to_calendar">Add to Calendar</string>
+    <string name="scheduled_times">Scheduled Times</string>
+    <string name="route_c_npick_up_8_15_am_drop_off_3_15_pm">Route C\nPick-up: 8:15 AM, Drop-off: 3:15 PM</string>
+    <string name="route_b_npick_up_8_00_am_drop_off_3_30_pm">Route B\nPick-up: 8:00 AM, Drop-off: 3:30 PM</string>
+    <string name="route_a_npick_up_7_30_am_drop_off_3_00_pm">Route A\nPick-up: 7:30 AM, Drop-off: 3:00 PM</string>
+    <string name="view_the_pick_up_and_drop_off_times_for_each_route_below">View the pick-up and drop-off times for each route below.</string>
+    <string name="bus_schedule">Bus Schedule</string>
 
 </resources>
