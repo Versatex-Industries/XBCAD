@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/what_best_describes_you"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"/>
+
+    <!-- Subtitle Text -->
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tailor_your_experience_and_features"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:layout_below="@id/titleText"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="20dp"/>
+
+    <!-- Checkboxes for Role Selection -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/subtitleText"
+        android:layout_centerHorizontal="true">
+
+        <CheckBox
+            android:id="@+id/checkboxParent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/parent" />
+
+        <CheckBox
+            android:id="@+id/checkboxTeacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/teacher" />
+
+        <CheckBox
+            android:id="@+id/checkboxStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/student" />
+
+        <CheckBox
+            android:id="@+id/checkboxDonor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/donor" />
+
+        <CheckBox
+            android:id="@+id/checkboxVolunteer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteer" />
+
+        <CheckBox
+            android:id="@+id/checkboxAdministrator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/administrator" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="326dp"
+        android:layout_height="57dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="439dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="128dp"
+        android:backgroundTint="#007BFF"
+        android:text="@string/continue_to_next_page" />
+
+    <!-- Continue Button -->
+</RelativeLayout>

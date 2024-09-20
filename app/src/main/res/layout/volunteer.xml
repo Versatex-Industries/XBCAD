@@ -1,0 +1,295 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Toolbar with Title and Settings Icon -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="16dp">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/volunteerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/volunteerh"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000000" />
+
+        <!-- Settings Icon -->
+    </RelativeLayout>
+
+    <!-- Upcoming Events Section -->
+    <TextView
+        android:id="@+id/upcomingEventsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upcoming_events"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
+
+    <!-- Event 1: Summer Camp -->
+    <TextView
+        android:id="@+id/eventTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Summer Camp"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/eventFund1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R2000 raised of R60000"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
+
+    <!-- Event 2: Back to School Drive -->
+    <TextView
+        android:id="@+id/eventTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to School Drive"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/eventFund2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R2000 raised of R60000"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:layout_marginTop="4dp" />
+
+    <!-- Volunteer Opportunities Section -->
+    <TextView
+        android:id="@+id/volunteerOpportunitiesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volunteer_opportunities"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
+
+    <!-- Opportunity 1: Sanitary Supply Drive -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:elevation="2dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/opportunityIcon1"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/opportunityTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sanitary supply drive"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/opportunityTime1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2d ago"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signUpButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Opportunity 2: School Supply Drive -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        android:elevation="2dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/opportunityIcon2"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/opportunityTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="School Supply Drive"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/opportunityTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4d ago"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signUpButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Upcoming Events Section -->
+    <TextView
+        android:id="@+id/moreUpcomingEventsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upcoming_events"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
+
+    <!-- Event 1: Winter Break -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/eventIcon1"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/eventTitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Winter Break"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/eventDate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dec 20 - Jan 3"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/eventArrowButton1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?android:attr/selectableItemBackground" />
+    </LinearLayout>
+
+    <!-- Event 2: No School -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/eventIcon2"
+            android:layout_width="32dp"
+            android:layout_height="32dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/eventTitle4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No school"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/eventDate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jan 17"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/eventArrowButton2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?android:attr/selectableItemBackground" />
+    </LinearLayout>
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/register_for_event"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:backgroundTint="#007BFF"
+        android:layout_marginTop="24dp" />
+</LinearLayout>

@@ -1,0 +1,405 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="16dp">
+
+        <!-- Dashboard Title -->
+        <TextView
+            android:id="@+id/dashboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dashboard"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000000"
+            tools:ignore="RelativeOverlap" />
+
+        <!-- Settings Icon -->
+    </RelativeLayout>
+
+    <!-- Bus Tracking Section -->
+    <TextView
+        android:id="@+id/busTrackingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bus_tracking"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
+
+    <!-- Bus 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/busIcon1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/todo2"
+            android:src="@drawable/busicon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/busInfo1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bus_1_eta_3_mins"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/busLocation1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/real_time_location"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bus 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/busIcon2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/todo5"
+            android:src="@drawable/busicon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <TextView
+                android:id="@+id/busInfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bus_2_eta_5_mins"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/busLocation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/real_time_location2"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Messages Section -->
+    <TextView
+        android:id="@+id/messagesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/messages2"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:textColor="#000000" />
+
+    <!-- Message 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/messageIcon1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/todo6"
+            android:src="@drawable/msg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            tools:ignore="InefficientWeight">
+
+            <TextView
+                android:id="@+id/messageTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/school_winter_break"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/messageTime1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_2d_ago"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <!-- Message Arrow Button 1 -->
+        <Button
+            android:id="@+id/messageArrowButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="76dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/next4"
+            android:textColor="#000000"
+            android:textSize="20sp"
+             />
+    </LinearLayout>
+
+    <!-- Message 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/messageIcon2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/todo3"
+            android:src="@drawable/msg" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            tools:ignore="InefficientWeight">
+
+            <TextView
+                android:id="@+id/messageTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/classroom_4_class_party"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/messageTime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_4d_ago"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <!-- Message Arrow Button 2 -->
+        <Button
+            android:id="@+id/messageArrowButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/next5"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <!-- Upcoming Events Section -->
+    <TextView
+        android:id="@+id/eventsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/upcoming_events"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Event 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/eventIcon1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/todo7"
+            android:src="@drawable/event" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            tools:ignore="InefficientWeight">
+
+            <TextView
+                android:id="@+id/eventTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/winter_break"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/eventDate1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dec_20_jan_3"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <!-- Event Arrow Button 1 -->
+        <Button
+            android:id="@+id/eventArrowButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/next5"
+            android:textColor="#000000"
+            android:textSize="20sp"
+             />
+    </LinearLayout>
+
+    <!-- Event 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/eventIcon2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/todo4"
+            android:src="@drawable/event" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            tools:ignore="InefficientWeight">
+
+            <TextView
+                android:id="@+id/eventTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_school"
+                android:textSize="14sp"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/eventDate2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/jan_17"
+                android:textSize="12sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+
+        <!-- Event Arrow Button 2 -->
+        <Button
+            android:id="@+id/eventArrowButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/next5"
+            android:textColor="#000000"
+            android:textSize="20sp"
+      />
+    </LinearLayout>
+
+    <!-- Send Message Button -->
+    <Button
+        android:id="@+id/sendMessageButton"
+        android:layout_width="383dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#007BFF"
+        android:text="@string/send_message"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/home"
+            android:textColor="#000000"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/eventsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/events"
+            android:textColor="#000000"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/notificationsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/notifications"
+            android:textColor="#000000"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/profile"
+            android:textColor="#000000"
+            android:background="?android:attr/selectableItemBackground" />
+    </LinearLayout>
+</LinearLayout>

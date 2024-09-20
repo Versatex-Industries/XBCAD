@@ -1,0 +1,285 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/volunteerTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/volunteer_opportunities"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#000000" />
+
+    <!-- Filter Options Section -->
+    <TextView
+        android:id="@+id/filterOptionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/filter_options"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
+
+    <!-- Filter Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/dateFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/date"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#000000"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/typeFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/type"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#000000"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/skillsFilterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/skills"
+            android:backgroundTint="#E0E0E0"
+            android:textColor="#000000"
+            tools:ignore="ButtonStyle" />
+    </LinearLayout>
+
+    <!-- Available Opportunities Title -->
+    <TextView
+        android:id="@+id/availableOpportunitiesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/available_opportunities"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
+
+    <!-- Opportunity 1: Community Cleanup -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+
+        android:layout_marginTop="8dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/opportunityTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/community_cleanup"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/opportunitySkills1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skills: Teamwork, Organization"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/opportunityTime1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time: 9 AM - 12 PM"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/signUpButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:backgroundTint="#007BFF"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Opportunity 2: Food Bank Assistance -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/opportunityTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food Bank Assistance"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/opportunitySkills2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skills: Customer Service, Organization"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/opportunityTime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time: 1 PM - 4 PM"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/signUpButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:backgroundTint="#007BFF"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="end"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Opportunity Details Section -->
+    <TextView
+        android:id="@+id/opportunityDetailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/opportunity_details"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+
+        android:layout_marginTop="8dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/opportunityDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Community Cleanup"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/opportunityLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location: Central Park"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/opportunityDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: June 15, 2023"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/opportunityTimeSlots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time Slots: 9 AM - 12 PM, 12 PM - 3 PM"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/opportunityContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Person: John Smith"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:layout_marginTop="4dp" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/home"
+            android:textColor="#000000"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/eventsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/events"
+            android:textColor="#000000"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/notificationsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/notifications"
+            android:textColor="#000000"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/profile"
+            android:textColor="#000000"
+            android:background="?android:attr/selectableItemBackground" />
+    </LinearLayout>
+</LinearLayout>

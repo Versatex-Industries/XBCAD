@@ -1,0 +1,115 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Back Button (Arrow) -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Backbtn3"
+        android:textSize="24sp"
+        android:backgroundTint="#007BFF"
+        android:background="@android:color/transparent"
+        android:textColor="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <!-- Title Text -->
+
+    <!-- School Input Label and Field -->
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="255dp"
+        android:layout_height="37dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="90dp"
+        android:text="@string/create_your_profile"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/schoolLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/school"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"/>
+
+    <EditText
+        android:id="@+id/schoolInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:hint="@string/enter_school_name"
+        android:layout_below="@id/schoolLabel"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/edit_text"
+        android:inputType="" />
+
+    <!-- Subjects Input Label and Field -->
+    <TextView
+        android:id="@+id/subjectsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/subjects"
+        android:layout_below="@id/schoolInput"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"/>
+    <EditText
+        android:id="@+id/subjectsInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/enter_subjects"
+        android:layout_below="@id/subjectsLabel"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/edit_text"
+        android:inputType="" />
+
+    <!-- Class Sections Input Label and Field -->
+    <TextView
+        android:id="@+id/classSectionsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/class_sections"
+        android:layout_below="@id/subjectsInput"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"/>
+    <EditText
+        android:id="@+id/classSectionsInput"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/enter_class_sections"
+        android:layout_below="@id/classSectionsLabel"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:drawable/edit_text"/>
+
+    <!-- Next Button -->
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/classSectionsInput"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#007BFF"
+        android:text="@string/next2"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
