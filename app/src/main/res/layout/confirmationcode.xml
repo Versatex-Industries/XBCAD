@@ -9,7 +9,7 @@
 
     <!-- Back Button (Arrow) -->
     <Button
-        android:id="@+id/backButton"
+        android:id="@+id/backArrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@null"

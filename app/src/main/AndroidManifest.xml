@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SchoolSync"
         tools:targetApi="31">
         <activity
+            android:name=".CreateAccount"
+            android:exported="false" />
+        <activity
             android:name=".ViewBusSchedule"
             android:exported="false" />
         <activity
