@@ -37,7 +37,7 @@
     <string name="messages">Messages</string>
     <string name="todo">TODO</string>
     <string name="inbox">Inbox</string>
-    <string name="type_a_message">Type a message...</string>
+    <string name="type_a_message">Type a message…</string>
     <string name="add_new_category">+ Add New Category</string>
     <string name="attach_photo">Attach Photo</string>
     <string name="send">Send</string>
@@ -105,5 +105,8 @@
     <string name="route_a_npick_up_7_30_am_drop_off_3_00_pm">Route A\nPick-up: 7:30 AM, Drop-off: 3:00 PM</string>
     <string name="view_the_pick_up_and_drop_off_times_for_each_route_below">View the pick-up and drop-off times for each route below.</string>
     <string name="bus_schedule">Bus Schedule</string>
+    <string name="enter_route">Enter Route</string>
+    <string name="please_enter_the_grade">Please Enter the Grade</string>
+    <string name="enter_childs_name">Enter Childs Name</string>
 
 </resources>

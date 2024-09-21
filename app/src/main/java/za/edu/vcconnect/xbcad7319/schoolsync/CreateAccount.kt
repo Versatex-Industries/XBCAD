@@ -90,7 +90,6 @@ class CreateAccount : AppCompatActivity() {
     private fun registerUser() {
         val fullName = fullNameInput.text.toString().trim()
         val email = emailInput.text.toString().trim()
-            mobileInput.text.toString().trim() // Assuming mobile is part of the registration
         val password = passwordInput.text.toString().trim()
 
         // Call API to register user
