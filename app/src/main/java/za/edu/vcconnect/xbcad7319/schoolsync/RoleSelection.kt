@@ -29,7 +29,6 @@ class RoleSelection : AppCompatActivity() {
             insets
         }
 
-        // Initialize checkboxes
         parent = findViewById(R.id.checkboxParent)
         teacher = findViewById(R.id.checkboxTeacher)
         student = findViewById(R.id.checkboxStudent)
@@ -43,21 +42,24 @@ class RoleSelection : AppCompatActivity() {
         // Handle button click
         continueButton.setOnClickListener {
             val selectedRoles = buildSelectedRoles()
-            Toast.makeText(this, selectedRoles, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Proceeding with: $selectedRoles", Toast.LENGTH_SHORT).show()
 
-            val intent = Intent(this, CreateAccount::class.java)
+            // Create an intent to start the CreateAccount activity with the selected roles
+            val intent = Intent(this, CreateAccount::class.java).apply {
+                putExtra("selectedRoles", selectedRoles)
+            }
             startActivity(intent)
         }
     }
 
     private fun buildSelectedRoles(): String {
-        return StringBuilder("Selected Roles: ").apply {
-            if (parent.isChecked) append("Parent ")
-            if (teacher.isChecked) append("Teacher ")
-            if (student.isChecked) append("Student ")
-            if (donor.isChecked) append("Donor ")
-            if (volunteer.isChecked) append("Volunteer ")
-            if (administrator.isChecked) append("Administrator ")
-        }.toString()
+        return StringBuilder().apply {
+            if (parent.isChecked) append("Parent, ")
+            if (teacher.isChecked) append("Teacher, ")
+            if (student.isChecked) append("Student, ")
+            if (donor.isChecked) append("Donor, ")
+            if (volunteer.isChecked) append("Volunteer, ")
+            if (administrator.isChecked) append("Administrator, ")
+        }.toString().removeSuffix(", ")
     }
 }
