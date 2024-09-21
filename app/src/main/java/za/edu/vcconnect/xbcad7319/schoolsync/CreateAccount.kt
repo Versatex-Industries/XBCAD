@@ -9,6 +9,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import za.edu.vcconnect.xbcad7319.schoolsync.api.ApiService
+import okhttp3.Call
+import okhttp3.Callback
+import okhttp3.Response
+import java.io.IOException
+
 
 class CreateAccount : AppCompatActivity() {
 
@@ -19,6 +25,7 @@ class CreateAccount : AppCompatActivity() {
     private lateinit var passwordInput: EditText
     private lateinit var nextButton: Button
     private lateinit var backArrow: Button
+    private lateinit var apiService: ApiService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,26 +43,19 @@ class CreateAccount : AppCompatActivity() {
         passwordInput = findViewById(R.id.passwordInput)
         nextButton = findViewById(R.id.nextButton)
         backArrow = findViewById(R.id.backArrow)
+        apiService = ApiService()
 
-        // Set listener for Back Arrow
         backArrow.setOnClickListener {
             finish() // Go back to the previous screen
         }
 
-        // Set listener for Next Button
         nextButton.setOnClickListener {
             if (validateInputs()) {
-                // Proceed to the next activity, passing user data if necessary
-                Toast.makeText(this, "Proceeding to the next step...", Toast.LENGTH_SHORT).show()
-
-                // Example intent for moving to another screen
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                registerUser()
             }
         }
     }
 
-    // Function to validate input fields
     private fun validateInputs(): Boolean {
         val fullName = fullNameInput.text.toString().trim()
         val email = emailInput.text.toString().trim()
@@ -67,21 +67,64 @@ class CreateAccount : AppCompatActivity() {
                 fullNameInput.error = "Full Name is required"
                 false
             }
+
             email.isEmpty() -> {
                 emailInput.error = "Email is required"
                 false
             }
+
             mobile.isEmpty() -> {
                 mobileInput.error = "Mobile Number is required"
                 false
             }
+
             password.isEmpty() -> {
                 passwordInput.error = "Password is required"
                 false
             }
+
             else -> true
         }
     }
-}
 
+    private fun registerUser() {
+        val fullName = fullNameInput.text.toString().trim()
+        val email = emailInput.text.toString().trim()
+            mobileInput.text.toString().trim() // Assuming mobile is part of the registration
+        val password = passwordInput.text.toString().trim()
+
+        // Call API to register user
+        apiService.register(fullName, "rolePlaceholder", email, password, object : Callback {
+            override fun onResponse(call: Call, response: Response) {
+                runOnUiThread {
+                    if (response.isSuccessful) {
+                        Toast.makeText(
+                            this@CreateAccount,
+                            "Registration successful",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        // Navigate to main activity or login page
+                        startActivity(Intent(this@CreateAccount, MainActivity::class.java))
+                    } else {
+                        Toast.makeText(
+                            this@CreateAccount,
+                            "Registration failed: ${response.message}",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call, e: IOException) {
+                runOnUiThread {
+                    Toast.makeText(
+                        this@CreateAccount,
+                        "Failed to connect to server: ${e.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        })
+    }
+}
 
