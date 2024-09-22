@@ -108,6 +108,10 @@
     <string name="enter_role">Enter Role</string>
     <string name="select_opportunity">Select Opportunity</string>
     <string name="select_opportunity_prompt">Select Opportunity</string>
+    <string name="enter_route">Enter Route</string>
+    <string name="please_enter_the_grade">Please Enter the Grade</string>
+    <string name="enter_childs_name">Enter Childs Name</string>
+
 
     <string-array name="opportunities_list">
         <item>Opportunity 1</item>
