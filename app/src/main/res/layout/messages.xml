@@ -5,15 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FFFFFF"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".MessagesActivity">
 
     <!-- Toolbar with Title and Icons -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
-        <!-- Hamburger Menu -->
 
         <!-- Title -->
         <TextView
@@ -47,26 +46,25 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp" />
 
-    <!-- Inbox Section Title -->
-    <TextView
-        android:id="@+id/inboxLabel"
-        android:layout_width="wrap_content"
+    <!-- Spinner for Opportunities -->
+    <Spinner
+        android:id="@+id/opportunitySpinner"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/inbox"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="16dp"
+        android:prompt="@string/select_opportunity_prompt" />
 
-    <!-- Messages List (RecyclerView) -->
+    <!-- Recipient Email Input -->
 
-    <!-- Message Input and Actions -->
+    <!-- RecyclerView for Messages -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/messagesRecyclerView"
-        android:layout_width="381dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp" />
 
+    <!-- Message Input Layout -->
     <LinearLayout
         android:id="@+id/messageInputLayout"
         android:layout_width="match_parent"
@@ -75,19 +73,31 @@
 
         <!-- Message Input Field -->
         <EditText
+            android:id="@+id/recipientEmailInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@android:drawable/edit_text"
+            android:hint="Enter recipient email"
+            android:inputType="textEmailAddress"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <EditText
             android:id="@+id/messageInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:hint="@string/type_a_message"
             android:background="@android:drawable/edit_text"
-            android:inputType=""
             android:padding="12dp"
-            android:layout_marginBottom="8dp"/>
+            android:layout_marginBottom="8dp" />
 
         <!-- Action Buttons (Add Category, Attach Photo, Send) -->
     </LinearLayout>
 
+    <!-- Add Category Button -->
     <Button
         android:id="@+id/addCategoryButton"
         android:layout_width="wrap_content"
@@ -97,6 +107,7 @@
         android:text="@string/add_new_category"
         android:textColor="#007BFF" />
 
+    <!-- Attach Photo Button -->
     <Button
         android:id="@+id/attachPhotoButton"
         android:layout_width="wrap_content"
@@ -106,6 +117,7 @@
         android:text="@string/attach_photo"
         android:textColor="#007BFF" />
 
+    <!-- Send Button -->
     <Button
         android:id="@+id/sendButton"
         android:layout_width="101dp"

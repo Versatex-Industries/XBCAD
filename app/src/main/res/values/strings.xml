@@ -105,5 +105,15 @@
     <string name="route_a_npick_up_7_30_am_drop_off_3_00_pm">Route A\nPick-up: 7:30 AM, Drop-off: 3:00 PM</string>
     <string name="view_the_pick_up_and_drop_off_times_for_each_route_below">View the pick-up and drop-off times for each route below.</string>
     <string name="bus_schedule">Bus Schedule</string>
+    <string name="enter_role">Enter Role</string>
+    <string name="select_opportunity">Select Opportunity</string>
+    <string name="select_opportunity_prompt">Select Opportunity</string>
+
+    <string-array name="opportunities_list">
+        <item>Opportunity 1</item>
+        <item>Opportunity 2</item>
+        <item>Opportunity 3</item>
+    </string-array>
+
 
 </resources>

@@ -4,36 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    android:padding="16dp">
+    android:padding="10dp"
+    tools:context=".CreateAccountActivity">
 
     <!-- Back Button (Arrow) -->
-
-    <!-- Title Text -->
-
     <Button
         android:id="@+id/backArrow"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="369dp"
-        android:layout_marginBottom="663dp"
+        android:layout_height="wrap_content"
         android:background="@null"
         android:backgroundTint="#007BFF"
-        android:text="@string/Backbtn"
+        android:text="Back"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <!-- Title Text -->
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/create_your_account"
+        android:text="Create Your Account"
         android:textStyle="bold"
         android:textSize="24sp"
         android:textColor="#000000"
@@ -41,18 +32,17 @@
         android:layout_marginTop="50dp"
         android:paddingBottom="20dp" />
 
-    <!-- Full Name Label -->
+    <!-- Full Name Input -->
     <TextView
         android:id="@+id/fullNameLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/full_name"
+        android:text="Full Name"
         android:textColor="#000000"
         android:textSize="16sp"
         android:layout_below="@id/titleText"
         android:layout_marginBottom="5dp"/>
 
-    <!-- Full Name Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/fullNameInputLayout"
         android:layout_width="match_parent"
@@ -62,27 +52,24 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/fullNameInput"
-            android:layout_width="366dp"
-            android:layout_height="55dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="Please Enter Full Name"
             android:inputType="text"
-            android:textColor="#000000"
-            tools:ignore="HardcodedText" />
-
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Email Label -->
+    <!-- Email Input -->
     <TextView
         android:id="@+id/emailLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/email"
+        android:text="Email"
         android:textColor="#000000"
         android:textSize="16sp"
         android:layout_below="@id/fullNameInputLayout"
         android:layout_marginBottom="5dp"/>
 
-    <!-- Email Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailInputLayout"
         android:layout_width="match_parent"
@@ -96,23 +83,20 @@
             android:layout_height="wrap_content"
             android:hint="Please Enter Email Address"
             android:inputType="textEmailAddress"
-            android:textColor="#000000"
-            tools:ignore="HardcodedText" />
-
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Mobile Number Label -->
+    <!-- Mobile Input -->
     <TextView
         android:id="@+id/mobileLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/mobile_number"
+        android:text="Mobile Number"
         android:textColor="#000000"
         android:textSize="16sp"
         android:layout_below="@id/emailInputLayout"
         android:layout_marginBottom="5dp"/>
 
-    <!-- Mobile Number Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/mobileInputLayout"
         android:layout_width="match_parent"
@@ -126,59 +110,46 @@
             android:layout_height="wrap_content"
             android:hint="Please Enter Mobile Number"
             android:inputType="phone"
-            android:textColor="#000000"
-            tools:ignore="HardcodedText" />
-
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Password Label -->
+    <!-- Password Input -->
     <TextView
         android:id="@+id/passwordLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/password"
+        android:text="Password"
         android:textColor="#000000"
         android:textSize="16sp"
         android:layout_below="@id/mobileInputLayout"
         android:layout_marginBottom="5dp"/>
 
-    <!-- Password Input -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordInputLayout"
-        android:layout_width="383dp"
-        android:layout_height="74dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/passwordLabel"
         android:layout_marginBottom="25dp">
+
+
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordInput"
             android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:layout_marginTop="439dp"
-            android:layout_marginBottom="736dp"
+            android:layout_height="wrap_content"
             android:hint="Please Enter Password"
             android:inputType="textPassword"
-            android:textColor="#000000"
-            tools:ignore="HardcodedText" />
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Next Button -->
-
     <Button
         android:id="@+id/nextButton"
-        android:layout_width="507dp"
-        android:layout_height="76dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="93dp"
-        android:layout_marginTop="629dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="78dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:backgroundTint="#007BFF"
         android:padding="15dp"
-        android:text="@string/next"
+        android:text="Next"
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
 </RelativeLayout>
