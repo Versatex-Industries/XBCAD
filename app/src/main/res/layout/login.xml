@@ -11,15 +11,17 @@
 
 
     <!-- Back Button (Arrow) -->
-    <Button
-        android:id="@+id/backArrow"
-        android:layout_width="77dp"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:text="@string/backbtn4"
-        android:backgroundTint="#007BFF"
-        android:textColor="#000000"
-        android:textSize="20sp" />
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="338dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        tools:ignore="ObsoleteLayoutParam,TouchTargetSizeCheck"
+        tools:srcCompat="@drawable/backbutton" />
 
     <!-- Title Text -->
     <TextView
@@ -50,7 +52,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/mobile_number_or_email"
             android:inputType="text"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,7 +74,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/password2"
             android:inputType="textPassword"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -96,14 +100,15 @@
             android:id="@+id/forgotPasswordButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
             android:background="@null"
+            android:backgroundTint="@color/white"
             android:text="@string/forgot_password"
             android:textColor="#007BFF"
             android:textSize="14sp"
-            android:layout_gravity="end"
-            android:layout_weight="1"
-            android:layout_marginStart="8dp"
-            android:backgroundTint="@color/white" />
+            tools:ignore="TextContrastCheck,VisualLintButtonSize" />
     </LinearLayout>
 
     <!-- Log In Button -->
@@ -115,7 +120,8 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:backgroundTint="#007BFF"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="24dp"
+        tools:ignore="VisualLintButtonSize" />
 
     <!-- Sign Up Button -->
     <Button

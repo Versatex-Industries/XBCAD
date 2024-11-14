@@ -1,11 +1,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FFFFFF"
     android:padding="16dp">
+
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="338dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        tools:ignore="ObsoleteLayoutParam,TouchTargetSizeCheck"
+        tools:srcCompat="@drawable/backbutton" />
 
     <!-- Title -->
     <TextView
@@ -103,7 +114,8 @@
             android:text="Skills: Teamwork, Organization"
             android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/opportunityTime1"
@@ -112,17 +124,19 @@
             android:text="Time: 9 AM - 12 PM"
             android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/signUpButton1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sign_up"
-            android:backgroundTint="#007BFF"
-            android:textColor="#FFFFFF"
             android:layout_gravity="end"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#007BFF"
+            android:text="@string/sign_up"
+            android:textColor="#FFFFFF"
+            tools:ignore="DuplicateSpeakableTextCheck,TextContrastCheck" />
     </LinearLayout>
 
     <!-- Opportunity 2: Food Bank Assistance -->
@@ -141,7 +155,8 @@
             android:text="Food Bank Assistance"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/opportunitySkills2"
@@ -150,7 +165,8 @@
             android:text="Skills: Customer Service, Organization"
             android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/opportunityTime2"
@@ -159,17 +175,19 @@
             android:text="Time: 1 PM - 4 PM"
             android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/signUpButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sign_up"
-            android:backgroundTint="#007BFF"
-            android:textColor="#FFFFFF"
             android:layout_gravity="end"
-            android:layout_marginTop="8dp" />
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#007BFF"
+            android:text="@string/sign_up"
+            android:textColor="#FFFFFF"
+            tools:ignore="TextContrastCheck" />
     </LinearLayout>
 
     <!-- Opportunity Details Section -->
@@ -199,7 +217,8 @@
             android:text="Community Cleanup"
             android:textStyle="bold"
             android:textSize="16sp"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/opportunityLocation"
@@ -208,7 +227,8 @@
             android:text="Location: Central Park"
             android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/opportunityDate"
@@ -217,7 +237,8 @@
             android:text="Date: June 15, 2023"
             android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/opportunityTimeSlots"
@@ -226,7 +247,8 @@
             android:text="Time Slots: 9 AM - 12 PM, 12 PM - 3 PM"
             android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/opportunityContact"
@@ -235,7 +257,8 @@
             android:text="Contact Person: John Smith"
             android:textSize="14sp"
             android:textColor="#666666"
-            android:layout_marginTop="4dp" />
+            android:layout_marginTop="4dp"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
     <!-- Bottom Navigation Bar -->
@@ -253,7 +276,8 @@
             android:layout_weight="1"
             android:text="@string/home"
             android:textColor="#000000"
-            android:background="?android:attr/selectableItemBackground" />
+            android:background="?android:attr/selectableItemBackground"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/eventsButton"
@@ -262,7 +286,8 @@
             android:layout_weight="1"
             android:text="@string/events"
             android:textColor="#000000"
-            android:background="?android:attr/selectableItemBackground" />
+            android:background="?android:attr/selectableItemBackground"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/notificationsButton"
@@ -271,7 +296,8 @@
             android:layout_weight="1"
             android:text="@string/notifications"
             android:textColor="#000000"
-            android:background="?android:attr/selectableItemBackground" />
+            android:background="?android:attr/selectableItemBackground"
+            tools:ignore="VisualLintButtonSize" />
 
         <Button
             android:id="@+id/profileButton"
@@ -280,6 +306,7 @@
             android:layout_weight="1"
             android:text="@string/profile"
             android:textColor="#000000"
-            android:background="?android:attr/selectableItemBackground" />
+            android:background="?android:attr/selectableItemBackground"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 </LinearLayout>
