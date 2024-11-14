@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
 
         // Redirect to LoginActivity after a delay of 2 seconds
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, LoginActivity::class.java)
+            val intent = Intent(this, CreateAccountActivity::class.java)
             startActivity(intent)
             finish()  // Optionally call finish() if you don't want the user to go back to MainActivity.
         }, 2000) // 2000 milliseconds = 2 seconds

@@ -8,18 +8,20 @@
     tools:context=".CreateAccountActivity">
 
     <!-- Back Button (Arrow) -->
-    <Button
-        android:id="@+id/backArrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:backgroundTint="#007BFF"
-        android:text="Back"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
 
     <!-- Title Text -->
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="360dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        tools:ignore="ObsoleteLayoutParam,TouchTargetSizeCheck"
+        tools:srcCompat="@drawable/backbutton" />
+
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
@@ -147,6 +149,8 @@
         android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90dp"
         android:backgroundTint="#007BFF"
         android:padding="15dp"
         android:text="Next"

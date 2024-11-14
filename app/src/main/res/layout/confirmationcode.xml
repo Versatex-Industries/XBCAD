@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,15 +8,17 @@
     tools:context=".EnterCodeActivity">
 
     <!-- Back Button (Arrow) -->
-    <Button
-        android:id="@+id/backArrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:text="@string/backbtn5"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        android:backgroundTint="@color/white"/>
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="338dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        tools:ignore="ObsoleteLayoutParam,TouchTargetSizeCheck"
+        tools:srcCompat="@drawable/backbutton" />
 
     <!-- Title Text -->
     <TextView
