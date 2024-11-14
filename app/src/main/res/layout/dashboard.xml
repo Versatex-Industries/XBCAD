@@ -6,6 +6,7 @@
     android:padding="16dp"
     tools:context=".DashboardActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,6 +18,21 @@
             android:layout_height="wrap_content"
             android:paddingBottom="8dp"
             android:paddingTop="16dp">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/BackButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/todo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/backbutton"
+                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
 
             <!-- Dashboard Title -->
             <TextView
@@ -145,7 +161,8 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:contentDescription="@string/todo6"
-                android:src="@drawable/msg" />
+                android:src="@drawable/msg"
+                tools:ignore="ImageContrastCheck" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -180,7 +197,8 @@
                 android:backgroundTint="@color/white"
                 android:text="@string/next4"
                 android:textColor="#000000"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
         </LinearLayout>
 
         <!-- za.edu.vcconnect.xbcad7319.schoolsync.Message 2 -->
@@ -196,7 +214,8 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:contentDescription="@string/todo3"
-                android:src="@drawable/msg" />
+                android:src="@drawable/msg"
+                tools:ignore="ImageContrastCheck" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -357,7 +376,8 @@
             android:backgroundTint="#007BFF"
             android:text="@string/send_message"
             android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <!-- Bottom Navigation Bar -->
         <LinearLayout
@@ -383,7 +403,8 @@
                 android:layout_weight="1"
                 android:text="@string/events"
                 android:textColor="#000000"
-                android:background="?android:attr/selectableItemBackground" />
+                android:background="?android:attr/selectableItemBackground"
+                tools:ignore="VisualLintButtonSize" />
 
             <Button
                 android:id="@+id/notificationsButton"
