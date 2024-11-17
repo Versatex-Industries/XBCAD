@@ -56,6 +56,18 @@
         android:textStyle="bold"
         tools:ignore="HardcodedText,VisualLintButtonSize" />
 
+    <Button
+        android:id="@+id/btn_help_support"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/black"
+        android:text="Help and Support"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+
     <!-- Logout Button -->
     <Button
         android:id="@+id/logoutButton"
