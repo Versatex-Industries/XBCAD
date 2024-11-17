@@ -37,7 +37,7 @@
     <string name="messages">Messages</string>
     <string name="todo">TODO</string>
     <string name="inbox">Inbox</string>
-    <string name="type_a_message">Type a message...</string>
+    <string name="type_a_message">Type a message…</string>
     <string name="add_new_category">+ Add New Category</string>
     <string name="attach_photo">Attach Photo</string>
     <string name="send">Send</string>
@@ -111,6 +111,10 @@
     <string name="enter_route">Enter Route</string>
     <string name="please_enter_the_grade">Please Enter the Grade</string>
     <string name="enter_childs_name">Enter Childs Name</string>
+    <string name="change_picture">Change Picture</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="update_profile">Update Profile</string>
 
 
     <string-array name="opportunities_list">
