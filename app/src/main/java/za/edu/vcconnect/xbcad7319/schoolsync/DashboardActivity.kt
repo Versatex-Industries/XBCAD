@@ -1,12 +1,13 @@
 package za.edu.vcconnect.xbcad7319.schoolsync
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.Response
@@ -28,15 +29,11 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var eventDate1: TextView
     private lateinit var eventTitle2: TextView
     private lateinit var eventDate2: TextView
-
-    private lateinit var sendMessageButton: Button
-    private lateinit var homeButton: Button
-    private lateinit var eventsButton: Button
-    private lateinit var notificationsButton: Button
-    private lateinit var profileButton: Button
+    private lateinit var bottomNavigationView: BottomNavigationView
 
     private val apiService = ApiService()
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dashboard)
@@ -55,31 +52,33 @@ class DashboardActivity : AppCompatActivity() {
         eventTitle2 = findViewById(R.id.eventTitle2)
         eventDate2 = findViewById(R.id.eventDate2)
 
-        sendMessageButton = findViewById(R.id.sendMessageButton)
-        homeButton = findViewById(R.id.homeButton)
-        eventsButton = findViewById(R.id.eventsButton)
-        notificationsButton = findViewById(R.id.notificationsButton)
-        profileButton = findViewById(R.id.profileButton)
+        bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
-        // Set button listeners
-        sendMessageButton.setOnClickListener {
-            navigateToMessages()  // Navigate to messages page
-        }
-
-        homeButton.setOnClickListener {
-            navigateToHome()
-        }
-
-        eventsButton.setOnClickListener {
-            navigateToVolunteerOpportunities()  // Navigate to volunteer opportunities page
-        }
-
-        notificationsButton.setOnClickListener {
-            navigateToNotifications()  // Navigate to notifications page
-        }
-
-        profileButton.setOnClickListener {
-            navigateToProfile()  // Navigate to profile page
+        // Handle BottomNavigationView item selection
+        bottomNavigationView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> {
+                    // Stay on Dashboard
+                    Toast.makeText(this, "You are already on Home", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.nav_events -> {
+                    val intent = Intent(this, VolunteerActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.nav_tracking_bus -> {
+                    val intent = Intent(this, ViewBusScheduleActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+//                R.id.nav_profile -> {
+//                    val intent = Intent(this, ProfileActivity::class.java)
+//                    startActivity(intent)
+//                    true
+//                }
+                else -> false
+            }
         }
 
         // Retrieve the token from shared preferences
@@ -90,9 +89,7 @@ class DashboardActivity : AppCompatActivity() {
             // Fetch dashboard data using the token
             fetchDashboardData(token)
         } else {
-            // Handle the case where the token is missing
             Toast.makeText(this, "Token not found. Please log in again.", Toast.LENGTH_SHORT).show()
-            // Optionally, you could redirect the user to the login screen here
         }
     }
 
@@ -115,7 +112,6 @@ class DashboardActivity : AppCompatActivity() {
                             Toast.makeText(this@DashboardActivity, "Failed to load data", Toast.LENGTH_SHORT).show()
                         }
                     } else {
-                        println(response.toString())
                         Toast.makeText(this@DashboardActivity, "Error loading dashboard", Toast.LENGTH_SHORT).show()
                     }
                 }
@@ -123,11 +119,11 @@ class DashboardActivity : AppCompatActivity() {
         })
     }
 
+    @SuppressLint("SetTextI18n")
     private fun updateDashboard(data: JSONObject) {
         val buses = data.optJSONArray("buses")
         val notifications = data.optJSONArray("notifications")
 
-        // Check if buses array has data
         if (buses != null && buses.length() > 0) {
             val bus1 = buses.getJSONObject(0)
             busInfo1.text = bus1.getString("busNumber")
@@ -142,65 +138,34 @@ class DashboardActivity : AppCompatActivity() {
                 busLocation2.text = ""
             }
         } else {
-            // No buses available
             busInfo1.text = "No Data Available"
             busLocation1.text = ""
             busInfo2.text = ""
             busLocation2.text = ""
         }
 
-        // Check if notifications array has data
         if (notifications != null && notifications.length() > 0) {
             messageTitle1.text = notifications.getString(0)
-            messageTime1.text = "2d ago" // Example timing
+            messageTime1.text = "2d ago"
 
             if (notifications.length() > 1) {
                 messageTitle2.text = notifications.getString(1)
-                messageTime2.text = "4d ago" // Example timing
+                messageTime2.text = "4d ago"
             } else {
                 messageTitle2.text = "No additional notifications"
                 messageTime2.text = ""
             }
         } else {
-            // No notifications available
             messageTitle1.text = "No Data Available"
             messageTime1.text = ""
             messageTitle2.text = ""
             messageTime2.text = ""
         }
 
-        // Display placeholder event data (static placeholders for now)
         eventTitle1.text = "Winter Break"
         eventDate1.text = "Dec 20 - Jan 3"
 
         eventTitle2.text = "No School"
         eventDate2.text = "Jan 17"
-    }
-
-    // Navigation methods
-    private fun navigateToMessages() {
-        val intent = Intent(this, MessagesActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigateToHome() {
-        // Example: Navigating to home screen (if you have a dedicated activity for that)
-        val intent = Intent(this, DashboardActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigateToVolunteerOpportunities() {
-        val intent = Intent(this, VolunteerActivity::class.java)
-        startActivity(intent)
-    }
-
-    private fun navigateToNotifications() {
-       // val intent = Intent(this, NotificationsActivity::class.java)
-       // startActivity(intent)
-    }
-
-    private fun navigateToProfile() {
-      //  val intent = Intent(this, ProfileActivity::class.java)
-      //  startActivity(intent)
     }
 }

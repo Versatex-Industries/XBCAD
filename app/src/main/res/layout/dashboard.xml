@@ -1,38 +1,50 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#FFFFFF"
-    android:padding="16dp"
-    tools:context=".DashboardActivity">
+
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Scrollable Content -->
 
 
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="372dp"
+        android:layout_height="113dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/black"
+        android:elevation="8dp"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <ScrollView
+        android:id="@+id/dashboardScrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="571dp"
+        android:padding="16dp">
 
-        <!-- Toolbar -->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="8dp"
-            android:paddingTop="16dp">
+            android:orientation="vertical">
 
-            <!-- Back Button -->
-            <ImageButton
-                android:id="@+id/BackButton"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:background="?android:attr/selectableItemBackground"
-                android:contentDescription="@string/todo"
-                android:scaleType="fitCenter"
-                android:src="@drawable/backbutton"
-                tools:ignore="TouchTargetSizeCheck,DuplicateSpeakableTextCheck" />
+            <!-- Toolbar -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp">
 
             <!-- Dashboard Title -->
             <TextView
@@ -148,7 +160,7 @@
             android:layout_marginTop="24dp"
             android:textColor="#000000" />
 
-        <!-- za.edu.vcconnect.xbcad7319.schoolsync.Message 1 -->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -161,8 +173,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:contentDescription="@string/todo6"
-                android:src="@drawable/msg"
-                tools:ignore="ImageContrastCheck" />
+                android:src="@drawable/msg" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -189,7 +200,7 @@
                     android:textColor="#666666" />
             </LinearLayout>
 
-            <!-- za.edu.vcconnect.xbcad7319.schoolsync.Message Arrow Button 1 -->
+
             <Button
                 android:id="@+id/messageArrowButton1"
                 android:layout_width="wrap_content"
@@ -197,8 +208,7 @@
                 android:backgroundTint="@color/white"
                 android:text="@string/next4"
                 android:textColor="#000000"
-                android:textSize="20sp"
-                tools:ignore="DuplicateSpeakableTextCheck" />
+                android:textSize="20sp" />
         </LinearLayout>
 
         <!-- za.edu.vcconnect.xbcad7319.schoolsync.Message 2 -->
@@ -214,8 +224,7 @@
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:contentDescription="@string/todo3"
-                android:src="@drawable/msg"
-                tools:ignore="ImageContrastCheck" />
+                android:src="@drawable/msg" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -315,115 +324,7 @@
                 android:textSize="20sp" />
         </LinearLayout>
 
-        <!-- Event 2 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginTop="8dp">
-
-            <ImageView
-                android:id="@+id/eventIcon2"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:contentDescription="@string/todo4"
-                android:src="@drawable/event" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="16dp"
-                android:layout_weight="1"
-                tools:ignore="InefficientWeight">
-
-                <TextView
-                    android:id="@+id/eventTitle2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/no_school"
-                    android:textSize="14sp"
-                    android:textColor="#000000" />
-
-                <TextView
-                    android:id="@+id/eventDate2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/jan_17"
-                    android:textSize="12sp"
-                    android:textColor="#666666" />
-            </LinearLayout>
-
-            <!-- Event Arrow Button 2 -->
-            <Button
-                android:id="@+id/eventArrowButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="80dp"
-                android:backgroundTint="@color/white"
-                android:text="@string/next5"
-                android:textColor="#000000"
-                android:textSize="20sp" />
         </LinearLayout>
 
-        <!-- Send za.edu.vcconnect.xbcad7319.schoolsync.Message Button -->
-        <Button
-            android:id="@+id/sendMessageButton"
-            android:layout_width="match_parent"
-            android:layout_height="43dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
-            android:backgroundTint="#007BFF"
-            android:text="@string/send_message"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <!-- Bottom Navigation Bar -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="16dp">
-
-            <Button
-                android:id="@+id/homeButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/home"
-                android:textColor="#000000"
-                android:background="?android:attr/selectableItemBackground" />
-
-            <Button
-                android:id="@+id/eventsButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/events"
-                android:textColor="#000000"
-                android:background="?android:attr/selectableItemBackground"
-                tools:ignore="VisualLintButtonSize" />
-
-            <Button
-                android:id="@+id/notificationsButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/notifications"
-                android:textColor="#000000"
-                android:background="?android:attr/selectableItemBackground" />
-
-            <Button
-                android:id="@+id/profileButton"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/profile"
-                android:textColor="#000000"
-                android:background="?android:attr/selectableItemBackground" />
-        </LinearLayout>
-
-    </LinearLayout>
 </ScrollView>
+    </RelativeLayout>

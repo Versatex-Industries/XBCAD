@@ -3,6 +3,7 @@ package za.edu.vcconnect.xbcad7319.schoolsync
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
@@ -12,7 +13,7 @@ import java.io.IOException
 
 class CreateAccountActivity : AppCompatActivity() {
 
-    private lateinit var backArrow: Button
+    private lateinit var backbtn: ImageButton
     private lateinit var nextButton: Button
     private lateinit var fullNameInput: TextInputEditText
     private lateinit var emailInput: TextInputEditText
@@ -28,7 +29,7 @@ class CreateAccountActivity : AppCompatActivity() {
         setContentView(R.layout.createaccount)
 
         // Initialize views
-        backArrow = findViewById(R.id.backArrow)
+        backbtn = findViewById(R.id.BackButton)
         nextButton = findViewById(R.id.nextButton)
         fullNameInput = findViewById(R.id.fullNameInput)
         emailInput = findViewById(R.id.emailInput)
@@ -43,7 +44,7 @@ class CreateAccountActivity : AppCompatActivity() {
         }
 
         // Set up listeners
-        backArrow.setOnClickListener { finish() }
+        backbtn.setOnClickListener { finish() }
 
         nextButton.setOnClickListener {
             validateInputs()

@@ -4,12 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class EnterCodeActivity : AppCompatActivity() {
 
-    private lateinit var backArrow: Button
+    private lateinit var backbtn: ImageButton
     private lateinit var nextButton: Button
     private lateinit var lostAccessButton: Button
     private lateinit var codeInput1: EditText
@@ -24,7 +25,7 @@ class EnterCodeActivity : AppCompatActivity() {
         setContentView(R.layout.confirmationcode)
 
         // Initialize views
-        backArrow = findViewById(R.id.backArrow)
+        backbtn = findViewById(R.id.BackButton)
         nextButton = findViewById(R.id.nextButton)
         lostAccessButton = findViewById(R.id.lostAccessButton)
         codeInput1 = findViewById(R.id.codeInput1)
@@ -35,7 +36,7 @@ class EnterCodeActivity : AppCompatActivity() {
         codeInput6 = findViewById(R.id.codeInput6)
 
         // Back button action
-        backArrow.setOnClickListener { finish() }
+        backbtn.setOnClickListener { finish() }
 
         // Next button action
         nextButton.setOnClickListener {

@@ -29,7 +29,7 @@ class AddChild : AppCompatActivity() {
         busRouteInput = findViewById(R.id.busRouteInput)
         cancelButton = findViewById(R.id.cancelButton)
         saveButton = findViewById(R.id.saveButton)
-        backButton = findViewById(R.id.backArrow)
+        backButton = findViewById(R.id.BackButton)
 
         backButton.setOnClickListener {
             finish() // Go back to the previous screen

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import okhttp3.Call
@@ -20,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var passwordInput: EditText
     private lateinit var loginButton: Button
     private lateinit var signUpButton: Button
-    private lateinit var backArrow: Button
+    private lateinit var backArrow: ImageButton
     private lateinit var rememberMeCheckBox: CheckBox
 
     private val apiService = ApiService() // API service instance
@@ -34,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
         passwordInput = findViewById(R.id.passwordInput)
         loginButton = findViewById(R.id.loginButton)
         signUpButton = findViewById(R.id.signUpButton)
-        backArrow = findViewById(R.id.backArrow)
+        backArrow = findViewById(R.id.BackButton)
         rememberMeCheckBox = findViewById(R.id.rememberMeCheckBox)
 
         // Handle login button click
