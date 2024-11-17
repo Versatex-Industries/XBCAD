@@ -15,9 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SchoolSync"
         tools:targetApi="31">
+
         <activity
             android:name=".Settings"
+            android:exported="false"/>
+
+        <activity
+            android:name=".UserProfile"
             android:exported="false" />
+
         <activity
             android:name=".CreateAccountActivity"
             android:exported="false" />
