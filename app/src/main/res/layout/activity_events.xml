@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Toolbar with Back Button and Title -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        android:paddingTop="16dp">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:scaleType="fitCenter"
+            android:src="@drawable/backbutton"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/events"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp" />
+    </RelativeLayout>
+
+    <!-- List of Upcoming Events -->
+    <TextView
+        android:id="@+id/upcomingEventsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/upcoming_events"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/eventsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" />
+
+    <!-- Join/Leave Event Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Join Event Button -->
+        <Button
+            android:id="@+id/joinEventButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#007BFF"
+            android:text="Join Event"
+            android:textColor="#FFFFFF"
+            tools:ignore="ButtonStyle,HardcodedText,TextContrastCheck" />
+
+        <!-- Leave Event Button -->
+        <Button
+            android:id="@+id/leaveEventButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="#FF0000"
+            android:text="Leave Event"
+            android:textColor="#FFFFFF"
+            tools:ignore="ButtonStyle,HardcodedText,TextContrastCheck" />
+    </LinearLayout>
+
+    <!-- Event Details Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp">
+
+        <!-- Event Name -->
+        <TextView
+            android:id="@+id/eventName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+
+        <!-- Event Details -->
+        <TextView
+            android:id="@+id/eventDetails"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:layout_marginTop="4dp"
+            android:text="Event details go here"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+
+        <!-- View Details Button -->
+        <Button
+            android:id="@+id/viewDetailsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#007BFF"
+            android:text="View Details"
+            android:textColor="#FFFFFF"
+            tools:ignore="HardcodedText,TextContrastCheck" />
+    </LinearLayout>
+</LinearLayout>
