@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.AppCompatButton
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -19,6 +20,7 @@ class Settings : AppCompatActivity() {
         val messagesButton = findViewById<Button>(R.id.messagesButton)
         val changeLanguageButton = findViewById<Button>(R.id.changeLanguageButton)
         val logoutButton = findViewById<Button>(R.id.logoutButton)
+        val Helpbutton = findViewById<Button>(R.id.btn_help_support)
 
         // Handle Edit Profile button click
         editProfileButton.setOnClickListener {
@@ -48,6 +50,11 @@ class Settings : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
+        }
+
+        Helpbutton.setOnClickListener {
+            // Show a Toast or open a language selection dialog
+            Toast.makeText(this, "Help Button", Toast.LENGTH_SHORT).show()
         }
     }
 }
