@@ -16,6 +16,9 @@
         android:theme="@style/Theme.SchoolSync"
         tools:targetApi="31">
         <activity
+            android:name=".BusTrackingActivity"
+            android:exported="false" />
+        <activity
             android:name=".Events"
             android:exported="false" />
         <activity
@@ -40,7 +43,7 @@
             android:name=".DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".AddChildActivity"
+            android:name=".CreateUserProfileActivity"
             android:exported="false" />
         <activity
             android:name=".SelectRoleActivity"

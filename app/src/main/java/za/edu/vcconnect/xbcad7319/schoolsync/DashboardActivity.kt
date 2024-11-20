@@ -49,8 +49,7 @@ class DashboardActivity : AppCompatActivity() {
         messageTime2 = findViewById(R.id.messageTime2)
         eventTitle1 = findViewById(R.id.eventTitle1)
         eventDate1 = findViewById(R.id.eventDate1)
-        eventTitle2 = findViewById(R.id.eventTitle2)
-        eventDate2 = findViewById(R.id.eventDate2)
+
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
@@ -72,11 +71,11 @@ class DashboardActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
-//                R.id.nav_profile -> {
-//                    val intent = Intent(this, ProfileActivity::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
+                R.id.nav_profile -> {
+                    val intent = Intent(this, UserProfile::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }
@@ -165,7 +164,6 @@ class DashboardActivity : AppCompatActivity() {
         eventTitle1.text = "Winter Break"
         eventDate1.text = "Dec 20 - Jan 3"
 
-        eventTitle2.text = "No School"
-        eventDate2.text = "Jan 17"
+
     }
 }

@@ -53,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
 
         // Handle sign-up button click
         signUpButton.setOnClickListener {
-            val intent = Intent(this, SelectRoleActivity::class.java)
+            val intent = Intent(this, CreateAccountActivity::class.java)
             startActivity(intent)
         }
 
