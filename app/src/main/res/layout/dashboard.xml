@@ -1,37 +1,30 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#FFFFFF"
+    android:background="#FFFFFF">
 
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <!-- Scrollable Content -->
-
-
+    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
-        android:layout_width="wrap_content"
-        android:layout_height="110dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="37dp"
         android:background="@color/black"
         android:elevation="8dp"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
         app:labelVisibilityMode="labeled"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="VisualLintBottomNav" />
 
+    <!-- ScrollView for Content -->
     <ScrollView
         android:id="@+id/dashboardScrollView"
         android:layout_width="match_parent"
-        android:layout_height="519dp"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationView"
         android:padding="16dp">
 
         <LinearLayout
@@ -39,39 +32,32 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Toolbar -->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="16dp"
-                android:paddingBottom="8dp">
-
-                <!-- Dashboard Title -->
-                <TextView
-                    android:id="@+id/dashboardTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:text="@string/dashboard"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    tools:ignore="RelativeOverlap" />
-
-            </RelativeLayout>
-
-            <!-- Bus Tracking Section -->
+            <!-- Dashboard Title -->
             <TextView
-                android:id="@+id/busTrackingTitle"
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="16dp"
+                android:text="Dashboard"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <!-- Global Options Section -->
+            <TextView
+                android:id="@+id/globalOptionsTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="@string/bus_tracking"
+                android:text="Global Options"
                 android:textColor="#000000"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
 
-            <!-- Bus 1 -->
+            <!-- Bus Tracking -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -80,37 +66,24 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/busIcon1"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="@string/todo2"
-                    android:src="@drawable/busicon" />
+                    android:id="@+id/busTrackingIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/busicon"
+                    tools:ignore="ContentDescription" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/busTrackingButton"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/busInfo1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/bus_1_eta_3_mins"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/busLocation1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/real_time_location"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                    android:backgroundTint="#007BFF"
+                    android:text="Bus Tracking"
+                    android:textColor="#FFFFFF"
+                    tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
             </LinearLayout>
 
-            <!-- Bus 2 -->
+            <!-- Notifications -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,212 +92,452 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/busIcon2"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="@string/todo5"
-                    android:src="@drawable/busicon" />
+                    android:id="@+id/notificationsIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/updateicon"
+                    tools:ignore="ContentDescription" />
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/notificationsButton"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/busInfo2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/bus_2_eta_5_mins"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/busLocation2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/real_time_location2"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
-                </LinearLayout>
+                    android:backgroundTint="#007BFF"
+                    android:text="Notifications"
+                    android:textColor="#FFFFFF"
+                    tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
             </LinearLayout>
 
-            <!-- Messages Section -->
-            <TextView
-                android:id="@+id/messagesTitle"
-                android:layout_width="wrap_content"
+            <!-- View Events/Volunteer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/eventsIcon"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/event"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/eventsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#007BFF"
+                    android:text="View Events/Volunteer"
+                    android:textColor="#FFFFFF"
+                    tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+            </LinearLayout>
+
+
+            <!-- Student Options Group -->
+            <LinearLayout
+                android:id="@+id/studentOptionsGroup"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="@string/messages2"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:visibility="gone">
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/messageIcon1"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="@string/todo6"
-                    android:src="@drawable/msg" />
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/studentOptionsTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    tools:ignore="InefficientWeight">
-
-                    <TextView
-                        android:id="@+id/messageTitle1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/school_winter_break"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/messageTime1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/_2d_ago"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
-                </LinearLayout>
-
-
-                <Button
-                    android:id="@+id/messageArrowButton1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="76dp"
-                    android:backgroundTint="@color/white"
-                    android:text="@string/next4"
+                    android:text="Student Options"
                     android:textColor="#000000"
-                    android:textSize="20sp" />
-            </LinearLayout>
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
-            <!-- za.edu.vcconnect.xbcad7319.schoolsync.Message 2 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/messageIcon2"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="@string/todo3"
-                    android:src="@drawable/msg" />
-
+                <!-- View Classes -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    tools:ignore="InefficientWeight">
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/messageTitle2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/classroom_4_class_party"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
+                    <ImageView
+                        android:id="@+id/viewClassesIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/viewclassesicon"
+                        tools:ignore="ContentDescription" />
 
-                    <TextView
-                        android:id="@+id/messageTime2"
-                        android:layout_width="wrap_content"
+                    <Button
+                        android:id="@+id/viewClassesButton"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/_4d_ago"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
+                        android:backgroundTint="#007BFF"
+                        android:text="View Classes"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
                 </LinearLayout>
 
-                <!-- za.edu.vcconnect.xbcad7319.schoolsync.Message Arrow Button 2 -->
-                <Button
-                    android:id="@+id/messageArrowButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:backgroundTint="@color/white"
-                    android:text="@string/next5"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
+                <!-- View Bus Route -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/viewBusRouteIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/busroute"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/viewBusRouteButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="View Bus Route"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                </LinearLayout>
+
+                <!-- View Timetable -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/viewTimetableStudentIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/timetableicon"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/viewTimetableStudentButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="View Timetable"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+
+                </LinearLayout>
+
+                <!-- View Grades/Marks -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/viewGradesStudentIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/viewgrades"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/viewGradesStudentButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="View Grades/Marks"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                </LinearLayout>
+
+                <!-- View Attendance -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/viewAttendanceStudentIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/attendance"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/viewAttendanceStudentButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="View Attendance"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Upcoming Events Section -->
-            <TextView
-                android:id="@+id/eventsTitle"
-                android:layout_width="wrap_content"
+            <!-- Teacher Options Group -->
+            <LinearLayout
+                android:id="@+id/teacherOptionsGroup"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="@string/upcoming_events"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            <!-- Event 1 -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/eventIcon1"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:contentDescription="@string/todo7"
-                    android:src="@drawable/event" />
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/teacherOptionsTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    tools:ignore="InefficientWeight">
+                    android:text="Teacher Options"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
 
-                    <TextView
-                        android:id="@+id/eventTitle1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/winter_break"
-                        android:textColor="#000000"
-                        android:textSize="14sp" />
+                <!-- Capture Grades/Marks -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/eventDate1"
-                        android:layout_width="wrap_content"
+                    <ImageView
+                        android:id="@+id/captureGradesIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/capturegradesicon"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/captureGradesButton"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/dec_20_jan_3"
-                        android:textColor="#666666"
-                        android:textSize="12sp" />
+                        android:backgroundTint="#007BFF"
+                        android:text="Capture Grades/Marks"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
                 </LinearLayout>
 
-                <!-- Event Arrow Button 1 -->
-                <Button
-                    android:id="@+id/eventArrowButton1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:backgroundTint="@color/white"
-                    android:text="@string/next5"
-                    android:textColor="#000000"
-                    android:textSize="20sp" />
+                <!-- Capture Attendance -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/captureAttendanceIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/attendance"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/captureAttendanceButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="Capture Attendance"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <!-- View Lesson Plan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/viewLessonPlanIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/lessonplanicon"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/viewLessonPlanButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="View Lesson Plan"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <!-- View Timetable -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/viewTimetableTeacherIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/timetableicon"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/viewTimetableTeacherButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="View Timetable"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+
+                </LinearLayout>
+
+                <!-- Add Events -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/addEventsIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/addevent"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/addEventsButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="Add Events"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
             </LinearLayout>
 
+            <!-- Parent Options Group -->
+            <LinearLayout
+                android:id="@+id/parentOptionsGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/parentOptionsTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Parent Options"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <!-- View Attendance -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/viewAttendanceParentIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/attendance"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/viewAttendanceParentButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="View Attendance"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                </LinearLayout>
+
+                <!-- View Grades -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/viewGradesIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/viewgrades"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/viewGradesButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="View Grades"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                </LinearLayout>
+
+                <!-- View Bus Routes -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/viewBusRoutesParentIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/busroute"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/viewBusRoutesParentButton"
+                        android:layout_width="332dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#007BFF"
+                        android:text="View Bus Routes"
+                        android:textColor="#FFFFFF"
+                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
     </ScrollView>
-    </RelativeLayout>
+</RelativeLayout>
