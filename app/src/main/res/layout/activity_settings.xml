@@ -1,12 +1,25 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#FFFFFF"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".Settings">
 
+
+    <ImageButton
+        android:id="@+id/bckbutton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="338dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:contentDescription="@string/todo"
+        android:scaleType="fitCenter"
+        tools:ignore="ObsoleteLayoutParam,TouchTargetSizeCheck"
+        tools:srcCompat="@drawable/backbutton" />
     <!-- Title -->
     <TextView
         android:id="@+id/settingsTitle"
@@ -26,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#007BFF"
         android:text="Edit Profile"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -38,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#007BFF"
         android:text="Messages"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -50,7 +63,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#007BFF"
         android:text="Change Language"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -61,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#007BFF"
         android:text="Help and Support"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -73,7 +86,7 @@
         android:id="@+id/logoutButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="#007BFF"
         android:text="Logout"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
