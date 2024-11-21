@@ -30,6 +30,21 @@
             android:exported="false" />
 
         <activity
+            android:name=".CaptureAttendanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TeacherTimetableActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewEditLessonPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CaptureGradesActivity"
+            android:exported="false" />
+        <activity
             android:name=".BusTrackingActivity"
             android:exported="false" />
         <activity

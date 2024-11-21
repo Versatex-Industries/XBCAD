@@ -1,0 +1,93 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    tools:context=".CaptureGradesActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/BackButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="338dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitCenter"
+            tools:ignore="ObsoleteLayoutParam,TouchTargetSizeCheck"
+            tools:srcCompat="@drawable/backbutton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capture Grades"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp" />
+
+        <EditText
+            android:id="@+id/etStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Name"
+            android:minHeight="48dp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etGrade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Grade"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etSubject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Subject"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+
+        <EditText
+            android:id="@+id/etclass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Class"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etTestorAssignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Test or Assignment"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/etMark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mark"
+            android:minHeight="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/saveGradeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:backgroundTint="#007BFF"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

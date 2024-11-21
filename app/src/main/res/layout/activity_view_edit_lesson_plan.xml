@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="16dp"
+    tools:context=".ViewEditLessonPlanActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/BckBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="338dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitCenter"
+            tools:ignore="ObsoleteLayoutParam,TouchTargetSizeCheck"
+            tools:srcCompat="@drawable/backbutton" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Lesson Plan for Nov 3–8"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp" />
+
+        <!-- Table Layout -->
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*" />
+
+        <!-- Add/Edit Button -->
+        <Button
+            android:id="@+id/addLessonButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#007BFF"
+            android:text="Add/Edit Lesson Plan"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>
