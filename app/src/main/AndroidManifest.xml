@@ -16,9 +16,14 @@
         android:theme="@style/Theme.SchoolSync"
         tools:targetApi="31">
         <activity
+            android:name=".ParentViewGrades"
+            android:exported="false" />
+        <activity
+            android:name=".ParentViewAttendance"
+            android:exported="false" />
+        <activity
             android:name=".ViewAttendance"
             android:exported="false" />
-
         <activity
             android:name=".ViewGrades"
             android:exported="false" />
@@ -28,7 +33,6 @@
         <activity
             android:name=".ViewClasses"
             android:exported="false" />
-
         <activity
             android:name=".CaptureAttendanceActivity"
             android:exported="false" />
