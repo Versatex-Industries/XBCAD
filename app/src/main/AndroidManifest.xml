@@ -16,6 +16,20 @@
         android:theme="@style/Theme.SchoolSync"
         tools:targetApi="31">
         <activity
+            android:name=".ViewAttendance"
+            android:exported="false" />
+
+        <activity
+            android:name=".ViewGrades"
+            android:exported="false" />
+        <activity
+            android:name=".ViewStudentTimetable"
+            android:exported="false" />
+        <activity
+            android:name=".ViewClasses"
+            android:exported="false" />
+
+        <activity
             android:name=".BusTrackingActivity"
             android:exported="false" />
         <activity

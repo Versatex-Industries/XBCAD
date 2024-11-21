@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        app:srcCompat="@drawable/backbutton"
+        android:layout_width="54dp"
+        android:layout_height="56dp"
+        android:scaleType="fitCenter"
+        tools:ignore="ContentDescription" />
+
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Attendance"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000"
+        tools:ignore="HardcodedText" />
+
+    <!-- Attendance Details -->
+    <ScrollView
+        android:id="@+id/ViewAttendanceScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleText"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Example Attendance Record -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Math - Present (10/10)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Science - Absent (8/10)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Add additional subjects as needed -->
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -15,8 +16,9 @@ class DashboardActivity : AppCompatActivity() {
     // Views
     private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var busTrackingButton: Button
-    private lateinit var updatesButton: Button
+    private lateinit var notificationsButton: Button
     private lateinit var eventsButton: Button
+    private lateinit var btnSettings: ImageButton
 
     private lateinit var studentOptionsGroup: LinearLayout
     private lateinit var teacherOptionsGroup: LinearLayout
@@ -49,8 +51,9 @@ class DashboardActivity : AppCompatActivity() {
         // Initialize views
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
         busTrackingButton = findViewById(R.id.busTrackingButton)
-        updatesButton = findViewById(R.id.notificationsButton)
+        notificationsButton = findViewById(R.id.notificationsButton)
         eventsButton = findViewById(R.id.eventsButton)
+        btnSettings = findViewById(R.id.btnSettings)
 
         studentOptionsGroup = findViewById(R.id.studentOptionsGroup)
         teacherOptionsGroup = findViewById(R.id.teacherOptionsGroup)
@@ -75,15 +78,23 @@ class DashboardActivity : AppCompatActivity() {
         viewGradesButton = findViewById(R.id.viewGradesButton)
         viewBusRoutesParentButton = findViewById(R.id.viewBusRoutesParentButton)
 
+        // Handle settings button click
+        btnSettings.setOnClickListener {
+            Toast.makeText(this, "Settings Clicked", Toast.LENGTH_SHORT).show()
+            // Navigate to Settings Activity
+            val intent = Intent(this, Settings::class.java) // Create this activity if not done yet
+            startActivity(intent)
+        }
+
         // Set role-based visibility
-        setupUserRole("Parent") // Change role here: "Student", "Teacher", "Parent"
+        setupUserRole("Student") // Change role here: "Student", "Teacher", "Parent"
 
         // Set onClick listeners for global buttons
         busTrackingButton.setOnClickListener {
             Toast.makeText(this, "Bus Tracking Clicked", Toast.LENGTH_SHORT).show()
         }
 
-        updatesButton.setOnClickListener {
+        notificationsButton.setOnClickListener {
             Toast.makeText(this, "Notifications Clicked", Toast.LENGTH_SHORT).show()
         }
 
