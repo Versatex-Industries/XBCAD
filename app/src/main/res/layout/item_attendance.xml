@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/background_card"
+    android:layout_margin="8dp"
+    >
+
+    <TextView
+        android:id="@+id/dateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_label"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/status_label" />
+
+    <TextView
+        android:id="@+id/remarksText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remarks_label" />
+</LinearLayout>

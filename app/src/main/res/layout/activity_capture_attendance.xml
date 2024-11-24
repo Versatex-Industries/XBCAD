@@ -1,0 +1,80 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:textColor="#000000"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mark_attendance_title"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Select Class -->
+        <Spinner
+            android:id="@+id/classSpinner"
+            android:layout_width="match_parent"
+            android:textColor="#000000"
+            android:backgroundTint="#000000"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Select Student -->
+        <Spinner
+            android:id="@+id/studentSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:backgroundTint="@color/black"
+            android:foregroundTint="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Attendance Date -->
+        <EditText
+            android:id="@+id/dateInput"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_hint"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Attendance Status -->
+        <Spinner
+            android:id="@+id/statusSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:backgroundTint="@color/black"
+            android:foregroundTint="@color/black"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Remarks -->
+        <EditText
+            android:id="@+id/remarksInput"
+            android:textColor="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/remarks_hint"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submitAttendanceButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#007BFF"
+            android:text="@string/submit_button"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>
