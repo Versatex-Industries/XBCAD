@@ -7,18 +7,17 @@
     android:orientation="vertical"
     android:background="#FFFFFF"
     android:padding="16dp"
-    tools:context=".LoginActivity">
+    tools:context=".ui.activity.LoginActivity">
 
-
-    <!-- Back Button (Arrow) -->
+    <!-- Back Button -->
     <ImageButton
-        android:id="@+id/BackButton"
+        android:id="@+id/backButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="338dp"
         android:background="?android:attr/selectableItemBackground"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/back_button_description"
         android:scaleType="fitCenter"
         tools:ignore="ObsoleteLayoutParam,TouchTargetSizeCheck"
         tools:srcCompat="@drawable/backbutton" />
@@ -26,36 +25,30 @@
     <!-- Title Text -->
     <TextView
         android:id="@+id/welcomeText"
-        android:layout_width="117dp"
-        android:layout_height="42dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="24dp"
-        android:text="Login"
+        android:text="@string/login"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <!-- Mobile Number or Email Input -->
+    <!-- Email Input -->
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/mobileEmailInputLayout"
+        android:id="@+id/emailInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:boxBackgroundColor="#F0F4F8"
-        app:boxStrokeColor="#E0E0E0"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp">
+        android:layout_marginTop="24dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/mobileEmailInput"
+            android:id="@+id/emailInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/mobile_number_or_email"
-            android:inputType="text"
-            android:textColor="#000000"
-            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
-
+            android:hint="@string/enter_email_address"
+            android:inputType="textEmailAddress"
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Password Input -->
@@ -63,21 +56,15 @@
         android:id="@+id/passwordInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        app:boxBackgroundColor="#F0F4F8"
-        app:boxStrokeColor="#E0E0E0"
-        app:boxCornerRadiusTopStart="10dp"
-        app:boxCornerRadiusTopEnd="10dp">
+        android:layout_marginTop="16dp">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/password2"
+            android:hint="@string/enter_password"
             android:inputType="textPassword"
-            android:textColor="#000000"
-            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
-
+            android:textColor="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Remember Me and Forgot Password -->
@@ -121,8 +108,7 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:backgroundTint="#007BFF"
-        android:layout_marginTop="24dp"
-        tools:ignore="VisualLintButtonSize" />
+        android:layout_marginTop="24dp" />
 
     <!-- Sign Up Button -->
     <Button
@@ -137,5 +123,4 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/white" />
-
 </LinearLayout>
