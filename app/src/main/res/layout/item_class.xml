@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Class Name -->
+    <TextView
+        android:id="@+id/className"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/class_name_label"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Student Count -->
+    <TextView
+        android:id="@+id/studentCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/student_count_label"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp" />
+</LinearLayout>
