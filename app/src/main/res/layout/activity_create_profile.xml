@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".ui.activity.CreateProfileActivity"
+    android:background="#FFFFFF">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,30 +16,20 @@
             android:id="@+id/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:paddingBottom="20dp"
-            android:text="Creating User Profile"
+            android:text="@string/create_profile_title"
             android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <!-- Global Options -->
-        <TextView
-            android:id="@+id/UserInfoTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Please fill all fields"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="8dp" />
-
         <EditText
             android:id="@+id/etName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
+            android:hint="@string/name_hint"
             android:minHeight="48dp" />
 
         <EditText
@@ -46,8 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:hint="Surname"
-            tools:ignore="TouchTargetSizeCheck" />
+            android:hint="@string/surname_hint" />
 
         <!-- Student Section -->
         <LinearLayout
@@ -62,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Student Information"
+                android:text="@string/student_info_title"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -70,24 +60,14 @@
                 android:id="@+id/etGrade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Grade"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/etAge"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="Age"
-                android:minHeight="48dp" />
+                android:hint="@string/grade_hint" />
 
             <EditText
                 android:id="@+id/etClass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:hint="Class"
-                android:minHeight="48dp" />
+                android:hint="@string/class_hint" />
         </LinearLayout>
 
         <!-- Parent Section -->
@@ -103,7 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Parent Information"
+                android:text="@string/parent_info_title"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -111,16 +91,7 @@
                 android:id="@+id/etChildName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Child's Name"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/etChildGrade"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="Child's Grade"
-                android:minHeight="48dp" />
+                android:hint="@string/child_name_hint" />
         </LinearLayout>
 
         <!-- Teacher Section -->
@@ -136,7 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Teacher Information"
+                android:text="@string/teacher_info_title"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -144,29 +115,16 @@
                 android:id="@+id/etSubject"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Subject"
-                android:minHeight="48dp" />
-
-            <EditText
-                android:id="@+id/etClassTeacher"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="Class"
-                android:minHeight="48dp" />
+                android:hint="@string/subject_hint" />
         </LinearLayout>
 
         <Button
             android:id="@+id/nextButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="90dp"
+            android:layout_marginTop="16dp"
             android:backgroundTint="#007BFF"
-            android:padding="15dp"
-            android:text="Next"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
+            android:text="@string/next_button"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
-
 </ScrollView>

@@ -1,0 +1,93 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <!-- Page Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="@string/create_event_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <!-- Event Name -->
+        <EditText
+            android:id="@+id/eventNameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_name_hint"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:background="@drawable/input_background" />
+
+        <!-- Event Details -->
+        <EditText
+            android:id="@+id/eventDetailsInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_details_hint"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:background="@drawable/input_background" />
+
+        <!-- Event Date -->
+        <EditText
+            android:id="@+id/eventDateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_date_hint"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:background="@drawable/input_background" />
+
+        <!-- Event Time -->
+        <EditText
+            android:id="@+id/eventTimeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_time_hint"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:background="@drawable/input_background" />
+
+        <!-- Event Location -->
+        <EditText
+            android:id="@+id/eventLocationInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/event_location_hint"
+            android:focusable="false"
+            android:clickable="true"
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:background="@drawable/input_background" />
+
+        <!-- Create Button -->
+        <Button
+            android:id="@+id/createButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#007BFF"
+            android:text="@string/create_event_button"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</ScrollView>
