@@ -4,8 +4,9 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF"
     android:padding="16dp"
-    tools:context=".SelectRoleActivity">
+    tools:context=".ui.activity.RoleSelectionActivity">
 
+    <!-- Back Button -->
     <ImageButton
         android:id="@+id/BackButton"
         android:layout_width="40dp"
@@ -13,7 +14,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="338dp"
         android:background="?android:attr/selectableItemBackground"
-        android:contentDescription="@string/todo"
+        android:contentDescription="@string/back_button_description"
         android:scaleType="fitCenter"
         tools:ignore="TouchTargetSizeCheck"
         tools:srcCompat="@drawable/backbutton" />
@@ -23,53 +24,58 @@
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/what_best_describes_you"
-        android:textSize="20sp"
-        android:textColor="#000000"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:paddingBottom="10dp"
-        tools:ignore="RelativeOverlap" />
+        android:layout_marginTop="50dp"
+        android:text="@string/role_selection_title"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <!-- Subtitle Text -->
     <TextView
         android:id="@+id/subtitleText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tailor_your_experience_and_features"
-        android:textSize="16sp"
-        android:textColor="#666666"
         android:layout_below="@id/titleText"
         android:layout_centerHorizontal="true"
-        android:paddingBottom="20dp" />
+        android:layout_marginTop="10dp"
+        android:text="@string/role_selection_subtitle"
+        android:textColor="#666666"
+        android:textSize="16sp" />
 
     <!-- Checkboxes for Role Selection -->
     <LinearLayout
+        android:id="@+id/checkboxContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:layout_below="@id/subtitleText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
 
         <CheckBox
             android:id="@+id/checkboxParent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/parent" />
+            android:text="@string/role_parent"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
         <CheckBox
             android:id="@+id/checkboxTeacher"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/teacher" />
+            android:text="@string/role_teacher"
+            android:textColor="#000000"
+            android:textSize="16sp" />
 
         <CheckBox
             android:id="@+id/checkboxStudent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/student" />
-
+            android:text="@string/role_student"
+            android:textColor="#000000"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <!-- Continue Button -->
@@ -78,12 +84,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="122dp"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="#007BFF"
         android:padding="15dp"
-        android:text="@string/continue_to_next_page"
+        android:text="@string/continue_button_text"
         android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        tools:ignore="VisualLintButtonSize" />
+        android:textStyle="bold" />
 </RelativeLayout>
