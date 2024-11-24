@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -7,25 +6,30 @@
     android:background="#F9F9F9"
     android:layout_marginBottom="8dp">
 
-    <!-- Event Name -->
     <TextView
         android:id="@+id/eventName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Event Name"
+        android:text="@string/event_name_placeholder"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#000000"
-        tools:ignore="HardcodedText" />
+        android:textColor="#000000" />
 
-    <!-- Event Details -->
     <TextView
         android:id="@+id/eventDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Event details go here"
+        android:text="@string/event_details_placeholder"
         android:textSize="14sp"
         android:textColor="#666666"
-        android:layout_marginTop="4dp"
-        tools:ignore="HardcodedText" />
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/viewDetailsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#007BFF"
+        android:text="@string/join_event"
+        android:textColor="#FFFFFF" />
 </LinearLayout>
