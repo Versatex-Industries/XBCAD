@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Page Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Add Event"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp" />
+
+        <!-- Event Name -->
+        <EditText
+            android:id="@+id/etEventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Name"
+            android:minHeight="48dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Details -->
+        <EditText
+            android:id="@+id/etEventDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Details"
+            android:minHeight="48dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="textMultiLine" />
+
+        <!-- Date -->
+        <EditText
+            android:id="@+id/etEventDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Date (YYYY-MM-DD)"
+            android:minHeight="48dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Location -->
+        <EditText
+            android:id="@+id/etEventLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:minHeight="48dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Created By -->
+        <EditText
+            android:id="@+id/etCreatedBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Created By (User ID)"
+            android:minHeight="48dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmitEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#007BFF"
+            android:text="Submit Event"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
