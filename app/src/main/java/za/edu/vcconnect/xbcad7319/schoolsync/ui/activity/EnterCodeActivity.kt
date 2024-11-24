@@ -1,4 +1,4 @@
-package za.edu.vcconnect.xbcad7319.schoolsync
+package za.edu.vcconnect.xbcad7319.schoolsync.ui.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,9 +7,10 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import za.edu.vcconnect.xbcad7319.schoolsync.R
 
 class EnterCodeActivity : AppCompatActivity() {
-
+/*
     private lateinit var backbtn: ImageButton
     private lateinit var nextButton: Button
     private lateinit var lostAccessButton: Button
@@ -22,7 +23,7 @@ class EnterCodeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.confirmationcode)
+        setContentView(R.layout.activity_confirmation_code)
 
         // Initialize views
         backbtn = findViewById(R.id.BackButton)
@@ -79,5 +80,5 @@ class EnterCodeActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Invalid code. Please try again.", Toast.LENGTH_SHORT).show()
         }
-    }
+    }*/
 }

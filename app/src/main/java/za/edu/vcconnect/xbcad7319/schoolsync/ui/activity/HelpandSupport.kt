@@ -1,4 +1,4 @@
-package za.edu.vcconnect.xbcad7319.schoolsync
+package za.edu.vcconnect.xbcad7319.schoolsync.ui.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -6,6 +6,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import za.edu.vcconnect.xbcad7319.schoolsync.R
 
 class HelpandSupport : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
