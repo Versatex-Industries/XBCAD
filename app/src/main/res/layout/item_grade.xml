@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/background_card"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/subjectText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/subject"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/gradeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/grade"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/remarksText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/remarks"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/timestampText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/timestamp"
+        android:textSize="12sp"
+        android:textColor="#757575" />
+</LinearLayout>
