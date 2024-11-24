@@ -5,9 +5,9 @@
     android:orientation="vertical"
     android:background="#FFFFFF"
     android:padding="16dp"
-    tools:context=".EnterCodeActivity">
+    tools:context=".ui.activity.EnterCodeActivity">
 
-    <!-- Back Button (Arrow) -->
+    <!--&lt;!&ndash; Back Button (Arrow) &ndash;&gt;
     <ImageButton
         android:id="@+id/BackButton"
         android:layout_width="40dp"
@@ -20,7 +20,7 @@
         tools:ignore="ObsoleteLayoutParam,TouchTargetSizeCheck"
         tools:srcCompat="@drawable/backbutton" />
 
-    <!-- Title Text -->
+    &lt;!&ndash; Title Text &ndash;&gt;
     <TextView
         android:id="@+id/titleText"
         android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
         android:layout_marginTop="24dp"
         />
 
-    <!-- Code Input Boxes (6 EditTexts) -->
+    &lt;!&ndash; Code Input Boxes (6 EditTexts) &ndash;&gt;
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -42,7 +42,7 @@
         android:gravity="center"
         android:layout_marginTop="24dp">
 
-        <!-- Each EditText represents one digit of the code -->
+        &lt;!&ndash; Each EditText represents one digit of the code &ndash;&gt;
         <EditText
             android:id="@+id/codeInput1"
             android:layout_width="40dp"
@@ -122,7 +122,7 @@
             tools:ignore="LabelFor" />
     </LinearLayout>
 
-    <!-- Next Button -->
+    &lt;!&ndash; Next Button &ndash;&gt;
     <Button
         android:id="@+id/nextButton"
         android:layout_width="match_parent"
@@ -135,7 +135,7 @@
         android:layout_gravity="center_horizontal"
         />
 
-    <!-- Lost Access to Email Text -->
+    &lt;!&ndash; Lost Access to Email Text &ndash;&gt;
     <Button
         android:id="@+id/lostAccessButton"
         android:layout_width="wrap_content"
@@ -146,6 +146,6 @@
         android:textSize="14sp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
-        android:backgroundTint="@color/white"/>
+        android:backgroundTint="@color/white"/>-->
 
 </LinearLayout>
