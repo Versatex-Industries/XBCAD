@@ -25,7 +25,7 @@ class EditProfileActivity : AppCompatActivity() {
     private lateinit var etGrade: EditText
     private lateinit var spinnerClass: Spinner
     private lateinit var parentSection: LinearLayout
-    private lateinit var etChildName: EditText
+    private lateinit var tvLinkedChildren: TextView
     private lateinit var teacherSection: LinearLayout
     private lateinit var etSubject: EditText
     private lateinit var saveButton: Button
@@ -33,6 +33,7 @@ class EditProfileActivity : AppCompatActivity() {
     private lateinit var selectedClassId: String // Selected class ID
     private lateinit var createClassButton: Button
     private lateinit var viewClassesButton: Button
+    private lateinit var addChildren: Button
 
     private lateinit var role: String
 
@@ -47,7 +48,9 @@ class EditProfileActivity : AppCompatActivity() {
         etGrade = findViewById(R.id.etGrade)
         spinnerClass = findViewById(R.id.spinnerClass)
         parentSection = findViewById(R.id.parentSection)
-        etChildName = findViewById(R.id.etChildName)
+        tvLinkedChildren = findViewById(R.id.tvLinkedChildren)
+        addChildren = findViewById(R.id.addChildren)
+
         teacherSection = findViewById(R.id.teacherSection)
         etSubject = findViewById(R.id.etSubject)
         saveButton = findViewById(R.id.saveButton)
@@ -67,6 +70,12 @@ class EditProfileActivity : AppCompatActivity() {
         // Set Save Button Listener
         saveButton.setOnClickListener {
             saveProfile()
+        }
+
+        addChildren.setOnClickListener {
+            val intent = Intent(this, AddChildrenActivity::class.java)
+            startActivity(intent)
+
         }
 
         createClassButton.setOnClickListener {
@@ -152,6 +161,7 @@ class EditProfileActivity : AppCompatActivity() {
                                     spinnerClass.setSelection(selectedClassIndex)
                                 }
                             }
+
                         }
                     }
                 } else {

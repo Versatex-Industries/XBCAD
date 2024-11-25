@@ -17,11 +17,13 @@
             android:id="@+id/backButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="360dp"
             android:background="?android:attr/selectableItemBackground"
-            android:contentDescription="@string/back_button_desc"
-            android:src="@drawable/backbutton"
-            tools:ignore="ContentDescription,TouchTargetSizeCheck" />
+            android:contentDescription="@string/back_button_description"
+            android:scaleType="fitCenter"
+            tools:ignore="ObsoleteLayoutParam,TouchTargetSizeCheck"
+            tools:srcCompat="@drawable/backbutton" />
 
         <!-- Contact Name -->
         <TextView

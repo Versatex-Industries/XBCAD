@@ -1,0 +1,50 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Children"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <Spinner
+            android:id="@+id/spinnerStudents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnAddChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Selected Child"
+            android:backgroundTint="#007BFF"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvCurrentChildren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Linked Children:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvLinkedChildren"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No children linked yet."
+            android:textSize="14sp" />
+    </LinearLayout>
+</ScrollView>

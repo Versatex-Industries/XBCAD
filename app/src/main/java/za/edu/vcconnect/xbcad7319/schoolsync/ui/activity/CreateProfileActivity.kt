@@ -23,7 +23,6 @@ class CreateProfileActivity : AppCompatActivity() {
     private lateinit var etGrade: EditText
     private lateinit var etClass: EditText
     private lateinit var parentSection: LinearLayout
-    private lateinit var etChildName: EditText
     private lateinit var teacherSection: LinearLayout
     private lateinit var etSubject: EditText
     private lateinit var nextButton: Button
@@ -41,7 +40,7 @@ class CreateProfileActivity : AppCompatActivity() {
         etGrade = findViewById(R.id.etGrade)
         etClass = findViewById(R.id.etClass)
         parentSection = findViewById(R.id.parentSection)
-        etChildName = findViewById(R.id.etChildName)
+
         teacherSection = findViewById(R.id.teacherSection)
         etSubject = findViewById(R.id.etSubject)
         nextButton = findViewById(R.id.nextButton)
@@ -84,7 +83,7 @@ class CreateProfileActivity : AppCompatActivity() {
                 profileData["classId"] = etClass.text.toString()
             }
             "Parent" -> {
-                profileData["linkedChildren"] = etChildName.text.toString()
+                profileData["linkedChildren"] = ""
             }
             "Teacher" -> {
                 profileData["subject"] = etSubject.text.toString()
