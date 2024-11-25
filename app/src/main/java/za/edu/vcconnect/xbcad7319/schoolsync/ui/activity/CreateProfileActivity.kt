@@ -40,7 +40,6 @@ class CreateProfileActivity : AppCompatActivity() {
         etSurname = findViewById(R.id.etSurname)
         studentSection = findViewById(R.id.studentSection)
         etGrade = findViewById(R.id.etGrade)
-        etClass = findViewById(R.id.etClass)
         parentSection = findViewById(R.id.parentSection)
 
         teacherSection = findViewById(R.id.teacherSection)
@@ -82,7 +81,7 @@ class CreateProfileActivity : AppCompatActivity() {
         when (role) {
             "Student" -> {
                 profileData["grade"] = etGrade.text.toString()
-                profileData["classId"] = etClass.text.toString()
+               /* profileData["classId"] = etClass.text.toString()*/
             }
             "Parent" -> {
                 profileData["linkedChildren"] = ""

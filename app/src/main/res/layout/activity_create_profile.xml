@@ -62,12 +62,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/grade_hint" />
 
-            <EditText
-                android:id="@+id/etClass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:hint="@string/class_hint" />
+
         </LinearLayout>
 
         <!-- Parent Section -->
