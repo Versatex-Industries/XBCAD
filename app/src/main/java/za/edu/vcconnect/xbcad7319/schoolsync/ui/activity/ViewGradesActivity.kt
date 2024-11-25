@@ -31,14 +31,43 @@ class ViewGradesActivity : AppCompatActivity() {
         gradesRecyclerView.layoutManager = LinearLayoutManager(this)
         gradesRecyclerView.adapter = adapter
 
-        loadGrades()
+        val childId = intent.getStringExtra("childId")
+        if (childId == null) {
+           loadGrades()
+        } else{
+            loadChildGrades(childId)
+        }
+
     }
 
     private fun loadGrades() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
+
                 val api = RetrofitClient.instance.create(ApiService::class.java)
                 val response = api.getGrades("Bearer ${getToken()}")
+                if (response.isSuccessful) {
+                    withContext(Dispatchers.Main) {
+                        grades.clear()
+                        grades.addAll(response.body() ?: emptyList())
+                        adapter.notifyDataSetChanged()
+                    }
+                } else {
+                    showError("Failed to load grades: ${response.message()}")
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                showError("Error loading grades: ${e.message}")
+            }
+        }
+    }
+
+    private fun loadChildGrades(childId: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+
+                val api = RetrofitClient.instance.create(ApiService::class.java)
+                val response = api.getStudentGrades("Bearer ${getToken()}", childId)
                 if (response.isSuccessful) {
                     withContext(Dispatchers.Main) {
                         grades.clear()
@@ -60,9 +89,9 @@ class ViewGradesActivity : AppCompatActivity() {
         return sharedPreferences.getString("auth_token", "") ?: ""
     }
 
-    private suspend fun showError(message: String) {
-        withContext(Dispatchers.Main) {
-            Toast.makeText(this@ViewGradesActivity, message, Toast.LENGTH_SHORT).show()
-        }
+    private fun showError(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
+
+
 }

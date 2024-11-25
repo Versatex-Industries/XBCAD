@@ -70,6 +70,11 @@ interface ApiService {
         @Header("Authorization") token: String,
         @Body classRequest: ClassCreationRequest
     ): Response<ClassCreationResponse>
+    @GET("students/grades/{studentId}")
+    suspend fun getStudentGrades(
+        @Header("Authorization") token: String,
+        @Path("studentId") studentId: String
+    ): Response<List<GradeResponse>>
 
 
     // Add students to a class

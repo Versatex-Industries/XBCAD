@@ -35,6 +35,7 @@ class DashboardActivity : AppCompatActivity() {
     private lateinit var addEventsButton: Button
     private lateinit var viewTimetableStudentButton: Button
     private lateinit var viewGradesStudentButton: Button
+    private lateinit var viewGradesButton: Button
     private lateinit var viewAttendanceStudentButton: Button
     private lateinit var viewAttendanceParentButton: Button
     private lateinit var eventsButton: Button
@@ -79,7 +80,7 @@ class DashboardActivity : AppCompatActivity() {
         sendNotificationButton = findViewById(R.id.sendNotificationButton)
         notificationsButton = findViewById(R.id.notificationsButton)
         busTrackingButton = findViewById(R.id.busTrackingButton)
-
+        viewGradesButton = findViewById(R.id.viewGradesButton)
 
         // Fetch user role from intent or shared preferences
         val role = intent.getStringExtra("role") ?: getUserRoleFromPreferences()
@@ -107,6 +108,7 @@ class DashboardActivity : AppCompatActivity() {
         }
 
         viewAttendanceParentButton.setOnClickListener {
+            intent.putExtra("destination", "attendance")
             val intent = Intent(this, ChildSelectorActivity::class.java)
             startActivity(intent)
         }
@@ -148,6 +150,12 @@ class DashboardActivity : AppCompatActivity() {
 
         viewGradesStudentButton.setOnClickListener {
             val intent = Intent(this, ViewGradesActivity::class.java)
+            startActivity(intent)
+        }
+
+        viewGradesButton.setOnClickListener {
+            val intent = Intent(this, ChildSelectorActivity::class.java)
+            intent.putExtra("destination", "grades")
             startActivity(intent)
         }
 
