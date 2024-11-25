@@ -50,8 +50,8 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         helpSupportButton.setOnClickListener {
-            // Add Help/Support functionality here
-            Toast.makeText(this, "Help and Support feature coming soon!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, HelpAndSupportActivity::class.java)
+            startActivity(intent)
         }
 
         logoutButton.setOnClickListener {

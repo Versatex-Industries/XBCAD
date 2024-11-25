@@ -99,7 +99,7 @@
             android:name=".ui.activity.StartNewMessageActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.activity.HelpandSupport"
+            android:name=".ui.activity.HelpAndSupportActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activity.CreateAccountActivity"
