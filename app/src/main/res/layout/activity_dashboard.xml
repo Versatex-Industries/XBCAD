@@ -10,12 +10,13 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:background="@android:color/transparent"
-        android:contentDescription="Settings"
+        android:contentDescription="@string/settings"
+        android:scaleType="fitCenter"
         android:src="@drawable/settingsbtn"
-        android:scaleType="fitCenter" />
+        tools:ignore="TouchTargetSizeCheck" />
 
     <!-- Dashboard Title -->
     <TextView
@@ -25,11 +26,11 @@
 
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:text="Dashboard"
+        android:text="@string/dashboard"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
-        tools:ignore="HardcodedText" />
+        />
 
     <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -67,11 +68,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Global Options"
+                android:text="@string/global_options"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:ignore="HardcodedText" />
+                 />
 
             <!-- Bus Tracking -->
             <LinearLayout
@@ -94,9 +95,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#007BFF"
-                    android:text="Bus Tracking"
+                    android:text="@string/bus_tracking"
                     android:textColor="#FFFFFF"
-                    tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                    tools:ignore="TextContrastCheck,VisualLintButtonSize" />
             </LinearLayout>
 
             <!-- Notifications -->
@@ -120,9 +121,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#007BFF"
-                    android:text="Notifications"
+                    android:text="@string/notifications"
                     android:textColor="#FFFFFF"
-                    tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                    tools:ignore="TextContrastCheck,VisualLintButtonSize" />
             </LinearLayout>
 
             <!-- View Events/Volunteer -->
@@ -146,9 +147,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#007BFF"
-                    android:text="View Events/Volunteer"
+                    android:text="@string/view_events_volunteer"
                     android:textColor="#FFFFFF"
-                    tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                    tools:ignore="TextContrastCheck,VisualLintButtonSize" />
             </LinearLayout>
 
             <!-- View Messages -->
@@ -161,10 +162,10 @@
 
                 <ImageView
                     android:id="@+id/messagesIcon"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
+                    android:layout_width="37dp"
+                    android:layout_height="37dp"
                     android:layout_marginEnd="8dp"
-                    android:src="@drawable/event"
+                    android:src="@drawable/messagesicon"
                     tools:ignore="ContentDescription" />
 
                 <Button
@@ -172,9 +173,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#007BFF"
-                    android:text="View Messages"
+                    android:text="@string/view_messages"
                     android:textColor="#FFFFFF"
-                    tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                    tools:ignore="TextContrastCheck,VisualLintButtonSize" />
             </LinearLayout>
 
 
@@ -192,12 +193,10 @@
                     android:id="@+id/studentOptionsTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Student Options"
+                    android:text="@string/student_options"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
-
+                    android:textStyle="bold" />
 
 
                 <!-- View Timetable -->
@@ -221,9 +220,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="View Timetable"
+                        android:text="@string/view_timetable"
                         android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
 
                 </LinearLayout>
 
@@ -248,9 +247,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="View Grades/Marks"
+                        android:text="@string/view_grades_marks"
                         android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
                 </LinearLayout>
 
                 <!-- View Attendance -->
@@ -274,9 +273,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="View Attendance"
+                        android:text="@string/view_attendance"
                         android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -293,11 +292,10 @@
                     android:id="@+id/teacherOptionsTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Teacher Options"
+                    android:text="@string/teacher_options"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
+                    android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -311,7 +309,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginEnd="8dp"
-                        android:src="@drawable/capturegradesicon"
+                        android:src="@drawable/classicon"
                         tools:ignore="ContentDescription" />
 
                     <Button
@@ -319,9 +317,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="Add Students to Class"
-                        android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText" />
+                        android:text="@string/add_students_to_class"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
 
@@ -337,7 +334,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginEnd="8dp"
-                        android:src="@drawable/capturegradesicon"
+                        android:src="@drawable/updateicon"
                         tools:ignore="ContentDescription" />
 
                     <Button
@@ -345,9 +342,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="Send Notification"
-                        android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText" />
+                        android:text="@string/send_notification"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
                 <!-- Capture Grades/Marks -->
                 <LinearLayout
@@ -370,9 +366,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="Capture Grades/Marks"
-                        android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText" />
+                        android:text="@string/capture_grades_marks"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <!-- Capture Attendance -->
@@ -396,9 +391,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="Capture Attendance"
-                        android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText" />
+                        android:text="@string/capture_attendance"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
                 <!-- Capture TimeTable -->
@@ -414,7 +408,7 @@
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_marginEnd="8dp"
-                        android:src="@drawable/attendance"
+                        android:src="@drawable/timetableicon"
                         tools:ignore="ContentDescription" />
 
                     <Button
@@ -422,9 +416,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="Capture Timetable"
-                        android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText" />
+                        android:text="@string/capture_timetable"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
 
 
@@ -449,9 +442,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="View Timetable"
-                        android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText" />
+                        android:text="@string/view_timetable"
+                        android:textColor="#FFFFFF" />
 
                 </LinearLayout>
 
@@ -476,9 +468,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="Add Events"
-                        android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText" />
+                        android:text="@string/add_events"
+                        android:textColor="#FFFFFF" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -495,11 +486,10 @@
                     android:id="@+id/parentOptionsTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Parent Options"
+                    android:text="@string/parent_options"
                     android:textColor="#000000"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    tools:ignore="HardcodedText" />
+                    android:textStyle="bold" />
 
                 <!-- View Attendance -->
                 <LinearLayout
@@ -522,9 +512,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="View Attendance"
+                        android:text="@string/view_attendance"
                         android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
                 </LinearLayout>
 
                 <!-- View Grades -->
@@ -548,9 +538,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="#007BFF"
-                        android:text="View Grades"
+                        android:text="@string/view_grades"
                         android:textColor="#FFFFFF"
-                        tools:ignore="HardcodedText,TextContrastCheck,VisualLintButtonSize" />
+                        tools:ignore="TextContrastCheck,VisualLintButtonSize" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

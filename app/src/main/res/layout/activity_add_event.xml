@@ -14,7 +14,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Add Event"
+            android:text="@string/add_event"
             android:textSize="24sp"
             android:textStyle="bold"
             android:paddingBottom="20dp" />
@@ -24,7 +24,7 @@
             android:id="@+id/etEventName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Event Name"
+            android:hint="@string/event_name"
             android:minHeight="48dp"
             android:layout_marginBottom="8dp" />
 
@@ -33,7 +33,7 @@
             android:id="@+id/etEventDetails"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Event Details"
+            android:hint="@string/event_details"
             android:minHeight="48dp"
             android:layout_marginBottom="8dp"
             android:inputType="textMultiLine" />
@@ -43,7 +43,7 @@
             android:id="@+id/etEventDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Event Date (YYYY-MM-DD)"
+            android:hint="@string/event_date_yyyy_mm_dd"
             android:minHeight="48dp"
             android:layout_marginBottom="8dp" />
 
@@ -52,7 +52,7 @@
             android:id="@+id/etEventLocation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Location"
+            android:hint="@string/location"
             android:minHeight="48dp"
             android:layout_marginBottom="8dp" />
 
@@ -61,7 +61,7 @@
             android:id="@+id/etCreatedBy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Created By (User ID)"
+            android:hint="@string/created_by_user_id"
             android:minHeight="48dp"
             android:layout_marginBottom="8dp" />
 
@@ -71,7 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#007BFF"
-            android:text="Submit Event"
+            android:text="@string/submit_event"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:layout_marginTop="16dp" />

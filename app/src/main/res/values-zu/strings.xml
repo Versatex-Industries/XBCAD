@@ -104,4 +104,52 @@
     <string name="period_time">08:00 – 09:00</string>
     <string name="subject_name">Izibalo</string>
     <string name="teacher_name">Uthisha: John Doe</string>
+
+    <string name="notifications_title">Thumela Isaziso</string>
+    <string name="notification_type_hint">Isihloko Sesaziso</string>
+    <string name="notification_content_hint">Okuqukethwe Kwesaziso</string>
+    <string name="send_notification_button">Thumela Isaziso</string>
+    <string name="create_class_title">Dala Ikilasi Elisha</string>
+
+    <string name="managed_classes_title">Amakilasi Alawulwa</string>
+    <string name="global_options">Izinketho Zomhlaba Wonke</string>
+    <string name="bus_tracking">Ukulandela Ibhasikidi</string>
+    <string name="notifications">Izaziso</string>
+    <string name="view_messages">Buka Imilayezo</string>
+    <string name="student_options">Izinketho Zomfundi</string>
+    <string name="view_timetable">Buka Isikhathi</string>
+    <string name="view_grades_marks">Buka Izinga/Izinhlamvu</string>
+    <string name="view_attendance">Buka Ukuhambela</string>
+    <string name="teacher_options">Izinketho Zothisha</string>
+    <string name="add_students_to_class">Faka Abafundi Ekilasini</string>
+    <string name="send_notification">Thumela Isaziso</string>
+    <string name="capture_grades_marks">Thatha Izinga/Izinhlamvu</string>
+    <string name="add_events">Faka Izehlakalo</string>
+    <string name="capture_attendance">Thatha Ukuhambela</string>
+    <string name="capture_timetable">Thatha Isikhathi</string>
+    <string name="view_events_volunteer">Buka Izehlakalo/Uzibambise</string>
+    <string name="parent_options">Izinketho Zabazali</string>
+    <string name="settings">Izilungiselelo</string>
+    <string name="dashboard">I-Dashboard</string>
+    <string name="view_grades">Buka Izinga</string>
+    <string name="add_children">Faka Izingane</string>
+    <string name="add_selected_child">Faka Umntwana Okhethiwe</string>
+    <string name="current_linked_children">Izingane Ezixhunywe Manje:</string>
+    <string name="no_children_linked_yet">Azikho izingane ezixhunywe okwamanje.</string>
+    <string name="add_event">Faka Umcimbi</string>
+    <string name="event_name">Igama Lomcimbi</string>
+    <string name="event_details">Imininingwane Yomcimbi</string>
+    <string name="event_date_yyyy_mm_dd">Usuku Lomcimbi (YYYY-MM-DD)</string>
+    <string name="location">Indawo</string>
+    <string name="created_by_user_id">Kwenziwe Ngu (I-ID Yomsebenzisi)</string>
+    <string name="submit_event">Thumela Umcimbi</string>
+    <string name="view_classes">Buka Amakilasi</string>
+    <string name="help_support">Usizo Nokwesekwa</string>
+    <string name="if_you_need_help_or_support_you_can_contact_us_by_phone_or_email_our_team_is_available_24_7_to_assist_you">Uma udinga usizo noma ukwesekwa, ungaxhumana nathi ngefoni noma nge-imeyili. Ithimba lethu liyatholakala 24/7 ukukusiza.</string>
+    <string name="call_support">Shayela Ukwesekwa</string>
+    <string name="email_support">Imeyili Yokwesekwa</string>
+    <string name="teacher_timetable">Isikhathi Sothisha</string>
+    <string name="unread_notifications">Izaziso Ezingenakufundwa</string>
+    <string name="read_notifications">Izaziso Ezifundwayo</string>
+
 </resources>
