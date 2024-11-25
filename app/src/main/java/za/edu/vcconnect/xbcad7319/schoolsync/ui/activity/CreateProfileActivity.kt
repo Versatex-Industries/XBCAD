@@ -84,7 +84,7 @@ class CreateProfileActivity : AppCompatActivity() {
                /* profileData["classId"] = etClass.text.toString()*/
             }
             "Parent" -> {
-                profileData["linkedChildren"] = ""
+                /*profileData["linkedChildren"] = ""*/
             }
             "Teacher" -> {
                 profileData["subject"] = etSubject.text.toString()

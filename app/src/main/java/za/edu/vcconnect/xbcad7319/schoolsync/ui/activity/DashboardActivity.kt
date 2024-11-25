@@ -87,6 +87,11 @@ class DashboardActivity : AppCompatActivity() {
         // Fetch user role from intent or shared preferences
         val role = intent.getStringExtra("role") ?: getUserRoleFromPreferences()
 
+        val sharedPreferences = getSharedPreferences("AppPrefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("role", role)
+        editor.apply()
+
         if (role.isNullOrEmpty()) {
             Toast.makeText(this@DashboardActivity, "Failed to get User role", Toast.LENGTH_SHORT)
                 .show()
