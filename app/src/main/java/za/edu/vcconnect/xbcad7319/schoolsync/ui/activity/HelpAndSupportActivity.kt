@@ -5,12 +5,14 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import za.edu.vcconnect.xbcad7319.schoolsync.R
 
 class HelpAndSupportActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         setContentView(R.layout.activity_help_and_support)
 
         val btnCallSupport: Button = findViewById(R.id.btnCallSupport)
