@@ -8,11 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import za.edu.vcconnect.xbcad7319.schoolsync.R
 import za.edu.vcconnect.xbcad7319.schoolsync.data.model.ClassResponse
 
-class ClassesAdapter(
+class StudentClassesAdapter (
     private val classes: List<ClassResponse>,
-    private val onClassClick: (ClassResponse) -> Unit,
-    private val onClassLongClick: ((ClassResponse) -> Unit)? = null // Optional long-click listener
-) : RecyclerView.Adapter<ClassesAdapter.ClassViewHolder>() {
+    private val onClassClick: (ClassResponse) -> Unit
+) : RecyclerView.Adapter<StudentClassesAdapter.ClassViewHolder>() {
 
     // ViewHolder for each class item
     inner class ClassViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -30,14 +29,6 @@ class ClassesAdapter(
         holder.className.text = classItem.name
         holder.studentCount.text = "Students: ${classItem.students.size}"
         holder.itemView.setOnClickListener { onClassClick(classItem) }
-
-        // Optional long-click listener
-        onClassLongClick?.let { longClick ->
-            holder.itemView.setOnLongClickListener {
-                longClick(classItem)
-                true
-            }
-        }
     }
 
     override fun getItemCount(): Int = classes.size

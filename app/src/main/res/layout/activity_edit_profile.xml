@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="invisible">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:orientation="vertical"
-            android:visibility="gone">
+            android:visibility="visible">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -115,15 +115,15 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/subject_hint" />
 
-            <!-- Class Name Field -->
-            <EditText
-                android:id="@+id/etClassName"
+
+            <Button
+                android:id="@+id/viewClasses"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:hint="@string/class_name_hint"
-                android:minHeight="48dp" />
-
+                android:backgroundTint="#ADADAD"
+                android:text="View Classes"
+                android:textColor="#000000" />
             <!-- Create Class Button -->
             <Button
                 android:id="@+id/createClassButton"

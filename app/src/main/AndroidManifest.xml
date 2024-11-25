@@ -27,6 +27,12 @@
             android:name=".ui.activity.BusRouteDetailsActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.activity.ViewClassesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.CreateClassActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.BusRoutesActivity"
             android:exported="false" />
         <activity

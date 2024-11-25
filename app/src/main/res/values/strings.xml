@@ -47,7 +47,6 @@
     <string name="teacher_info_title">Teacher Information</string>
     <string name="subject_hint">Subject</string>
     <string name="class_name_hint">Class Name</string>
-    <string name="create_class_button">Create Class</string>
     <string name="save_changes_button">Save Changes</string>
     <string name="type_message_hint">Type a Message</string>
     <string name="select_child_title">Select a Child</string>
@@ -107,5 +106,8 @@
     <string name="notification_type_hint">Notification Heading</string>
     <string name="notification_content_hint">Notification Content</string>
     <string name="send_notification_button">Send Notification</string>
+    <string name="create_class_title">Create a New Class</string>
+    <string name="create_class_button">Create Class</string>
+    <string name="managed_classes_title">Managed Classes</string>
 
 </resources>

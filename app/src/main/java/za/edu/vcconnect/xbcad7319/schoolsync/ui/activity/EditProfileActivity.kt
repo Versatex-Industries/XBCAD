@@ -1,5 +1,6 @@
 package za.edu.vcconnect.xbcad7319.schoolsync.ui.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.*
@@ -30,6 +31,8 @@ class EditProfileActivity : AppCompatActivity() {
     private lateinit var saveButton: Button
     private lateinit var classList: MutableList<ClassItem> // List to store class data
     private lateinit var selectedClassId: String // Selected class ID
+    private lateinit var createClassButton: Button
+    private lateinit var viewClassesButton: Button
 
     private lateinit var role: String
 
@@ -48,6 +51,8 @@ class EditProfileActivity : AppCompatActivity() {
         teacherSection = findViewById(R.id.teacherSection)
         etSubject = findViewById(R.id.etSubject)
         saveButton = findViewById(R.id.saveButton)
+        createClassButton = findViewById(R.id.createClassButton)
+        viewClassesButton = findViewById(R.id.viewClasses)
 
         // Get user role
         role = getUserRoleFromPreferences()
@@ -62,6 +67,19 @@ class EditProfileActivity : AppCompatActivity() {
         // Set Save Button Listener
         saveButton.setOnClickListener {
             saveProfile()
+        }
+
+        createClassButton.setOnClickListener {
+            val intent = Intent(this, CreateClassActivity::class.java)
+            startActivity(intent)
+
+        }
+
+
+        viewClassesButton.setOnClickListener {
+            val intent = Intent(this, ViewClassesActivity::class.java)
+            startActivity(intent)
+
         }
     }
 

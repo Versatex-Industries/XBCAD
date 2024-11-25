@@ -14,13 +14,13 @@ import za.edu.vcconnect.xbcad7319.schoolsync.R
 import za.edu.vcconnect.xbcad7319.schoolsync.data.api.ApiService
 import za.edu.vcconnect.xbcad7319.schoolsync.data.api.RetrofitClient
 import za.edu.vcconnect.xbcad7319.schoolsync.data.model.ClassResponse
-import za.edu.vcconnect.xbcad7319.schoolsync.ui.adapter.ClassesAdapter
+import za.edu.vcconnect.xbcad7319.schoolsync.ui.adapter.StudentClassesAdapter
 
 class SelectClassActivity : AppCompatActivity() {
 
     private lateinit var classesRecyclerView: RecyclerView
     private lateinit var backButton: Button
-    private lateinit var adapter: ClassesAdapter
+    private lateinit var adapter: StudentClassesAdapter
     private val classes = mutableListOf<ClassResponse>()
 
     private lateinit var selectedStudentIds: List<String>
@@ -37,7 +37,7 @@ class SelectClassActivity : AppCompatActivity() {
         selectedStudentIds = intent.getStringArrayListExtra("studentIds") ?: emptyList()
 
         // Set up RecyclerView
-        adapter = ClassesAdapter(classes) { selectedClass ->
+        adapter = StudentClassesAdapter(classes) { selectedClass ->
             addStudentsToClass(selectedClass._id)
         }
         classesRecyclerView.layoutManager = LinearLayoutManager(this)
@@ -95,7 +95,6 @@ class SelectClassActivity : AppCompatActivity() {
             }
         }
     }
-
 
     private fun getToken(): String {
         val sharedPreferences = getSharedPreferences("AppPrefs", MODE_PRIVATE)
